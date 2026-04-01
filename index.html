@@ -966,17 +966,31 @@ button:hover {
   transform: translateY(-3px);
 }
 
-/* WHATSAPP BUTTON */
-.btn-whatsapp {
-  background: #25D366;
-  color: white;
-}
+.whatsapp-advanced-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25D366; /* solid color instead of gradient */
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
 
-.btn-whatsapp:hover {
-  background: #1ebe5d;
-  transform: translateY(-3px);
-}
+  /* 🔥 ADD THIS */
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
 
+  position: relative;
+  transition: all 0.3s ease;
+}
+	  .whatsapp-advanced-btn .text {
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+	  .whatsapp-advanced-btn {
+  backdrop-filter: blur(6px);
+}
 /* BOOK BUTTON */
 .btn-book {
   background: transparent;
