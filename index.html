@@ -361,39 +361,58 @@ body {
   text-decoration: none;
 }
 
+/* WHATSAPP BUTTON - HIGH CONVERSION STYLE */
 .btn-whatsapp {
-  background: #25D366;
-  color: #fff;
-  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #25D366; /* solid WhatsApp green */
+  color: #ffffff;
+
+  padding: 14px 24px;
   border-radius: 12px;
-  font-weight: 800;
+
   font-size: 16px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(37,211,102,0.7);
-  animation: pulse 1.8s infinite;
-}
-
-.btn-whatsapp small {
-  display: block;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.btn-call {
-  background: #0284c7;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 10px;
   font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
 }
 
-/* Pulse Animation */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-  100% { transform: scale(1); }
+/* ICON */
+.btn-whatsapp i {
+  font-size: 18px;
 }
-/* TRUST */
+
+/* HOVER EFFECT */
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.8);
+}
+
+/* SHINE EFFECT */
+.btn-whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-whatsapp:hover::before {
+  left: 120%;
+	
+}/* TRUST */
 .trust-inline {
   display: flex;
   gap: 12px;
@@ -1994,7 +2013,9 @@ Elderly care physiotherapy plays an important role in promoting active aging by 
 
       <div class="cta-buttons">
         <a href="tel:+918897978832" class="btn btn-call">📞 Call Now</a>
-        <a href="https://wa.me/918897978832" class="btn btn-whatsapp">💬 WhatsApp</a>
+        <a href="https://wa.me/918897978832" class="btn-whatsapp">
+  💬 Get Instant Help on WhatsApp
+</a>
         <a href="#contact" class="btn btn-book">📅 Book Appointment</a>
       </div>
 
