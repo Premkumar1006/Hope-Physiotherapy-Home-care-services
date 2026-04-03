@@ -358,17 +358,35 @@ body {
 .btn-whatsapp {
   background: #25D366;
   color: #fff;
-  padding: 14px 22px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(37,211,102,0.7);
+  animation: pulse 1.8s infinite;
+}
+
+.btn-whatsapp small {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-call {
+  background: #0284c7;
+  color: #fff;
+  padding: 14px 20px;
   border-radius: 10px;
   font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 0 20px rgba(37,211,102,0.6);
 }
 
-.btn-whatsapp:hover {
-  transform: scale(1.05);
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
 }
-
 /* TRUST */
 .trust-inline {
   display: flex;
@@ -388,7 +406,24 @@ body {
   border: 1px solid rgba(255,255,255,0.3);
   transition: 0.3s ease;
 }
+.trust-box {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  animation: glow 4s infinite;
+}
 
+.trust-box:nth-child(2){ animation-delay:1s;}
+.trust-box:nth-child(3){ animation-delay:2s;}
+
+@keyframes glow {
+  0% { box-shadow: none; }
+  50% { box-shadow: 0 0 15px rgba(255,255,255,0.6); }
+  100% { box-shadow: none; }
+}
 /* GLOW ANIMATION */
 .trust-box {
   animation: glowFade 6s infinite;
@@ -1511,24 +1546,25 @@ button:hover {
       </div>
 
       <div class="hero-buttons">
-        <a href="tel:+918897978832" class="btn-call">📞 Call Now</a>
 
-        <a href="https://wa.me/918897978832?text=Hi%20Doctor%20I%20need%20physiotherapy"
-           class="btn-whatsapp" target="_blank">
-           💬 WhatsApp Now (Instant Response)
-        </a>
-      </div>
+  <a href="https://wa.me/918897978832?text=Hi%20Doctor%20I%20need%20physiotherapy"
+     class="btn-whatsapp" target="_blank">
+     💬 Book on WhatsApp
+     <small>(Instant Reply)</small>
+  </a>
 
-      <div class="trust-slider">
-  <div class="trust-track">
+  <a href="tel:+918897978832" class="btn-call">
+    📞 Call Now
+  </a>
 
-    <span class="trust-box">✔ 14+ Years Experience</span>
-    <span class="trust-box">✔ 1000+ Patients</span>
-    <span class="trust-box">✔ Home Visit Specialist</span>
-  </div>
 </div>
-    </div>
 
+      <div class="trust-inline">
+  <span class="trust-box">⭐ 5 Star Rated Care</span>
+  <span class="trust-box">✔ 14+ Years Experience</span>
+  <span class="trust-box">✔ 1000+ Patients Treated</span>
+</div>
+		
     <!-- RIGHT FORM -->
     <div class="hero-form-box">
 
