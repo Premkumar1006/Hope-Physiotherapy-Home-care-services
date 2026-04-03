@@ -370,6 +370,39 @@ body {
 }
 
 /* TRUST */
+	  .trust-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.trust-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: scrollTrust 10s linear infinite;
+}
+
+.trust-box {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Animation */
+@keyframes scrollTrust {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover (nice UX) */
+.trust-slider:hover .trust-track {
+  animation-play-state: paused;
+}
 .trust-inline {
   display: flex;
   gap: 10px;
@@ -1478,12 +1511,20 @@ button:hover {
         </a>
       </div>
 
-      <div class="trust-inline">
-        <span class="trust-box">✔ 14+ Years Experience</span>
-        <span class="trust-box">✔ 1000+ Patients</span>
-        <span class="trust-box">✔ Home Visit Specialist</span>
-      </div>
+      <div class="trust-slider">
+  <div class="trust-track">
 
+    <span class="trust-box">✔ 14+ Years Experience</span>
+    <span class="trust-box">✔ 1000+ Patients</span>
+    <span class="trust-box">✔ Home Visit Specialist</span>
+
+    <!-- duplicate for smooth loop -->
+    <span class="trust-box">✔ 14+ Years Experience</span>
+    <span class="trust-box">✔ 1000+ Patients</span>
+    <span class="trust-box">✔ Home Visit Specialist</span>
+
+  </div>
+</div>
     </div>
 
     <!-- RIGHT FORM -->
