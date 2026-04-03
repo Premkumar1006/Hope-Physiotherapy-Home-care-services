@@ -314,7 +314,13 @@ body {
 	.hero-banner-wrap {
   align-items: center;
 }  
-
+.hero-banner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap; /* 🔥 THIS FIXES YOUR ISSUE */
+}
 .hero-left h1 {
   font-size: 52px;
   line-height: 1.1;
@@ -1549,63 +1555,54 @@ button:hover {
   </div>
 </header>
 
-  <section class="hero-banner">
+  <<section class="hero-banner">
   <div class="container hero-banner-wrap">
 
-    <!-- LEFT -->
+    <!-- LEFT SIDE -->
     <div class="hero-left">
-
-      <h1>
-        Struggling with <span>Pain, Mobility or Neurological Issues?</span>
-      </h1>
+      <h1>Struggling with Pain, Mobility or Neurological Issues?</h1>
 
       <p>
-        Expert Physiotherapy at Home in Hyderabad for Pain Relief, Stroke Recovery,
-        Cardiac Rehab & Elder Care.
+        Expert Physiotherapy at Home in Hyderabad for Pain Relief,
+        Stroke Recovery, Cardiac Rehab & Elder Care.
       </p>
 
-      <div class="urgency">
-        ⚡ Same Day Home Visit Available | Limited Slots Today
+      <!-- buttons -->
+      <div class="hero-buttons">
+        <a href="#" class="btn-whatsapp">💬 Book on WhatsApp</a>
+        <a href="#" class="btn-call">📞 Call Now</a>
       </div>
 
-      <div class="hero-buttons">
-
-  <a href="https://wa.me/918897978832?text=Hi%20Doctor%20I%20need%20physiotherapy"
-     class="btn-whatsapp" target="_blank">
-     💬 Book on WhatsApp
-     <small>(Instant Reply)</small>
-  </a>
-
-  <a href="tel:+918897978832" class="btn-call">
-    📞 Call Now
-  </a>
-
-</div>
-
+      <!-- trust -->
       <div class="trust-inline">
-  <span class="trust-box">⭐ 5 Star Rated Care</span>
-  <span class="trust-box">✔ 14+ Years Experience</span>
-  <span class="trust-box">✔ 1000+ Patients Treated</span>
-</div>
-		
-    <!-- RIGHT FORM -->
-    <form id="mainWhatsappForm">
+        <span class="trust-box">⭐ 5 Star Rated Care</span>
+        <span class="trust-box">✔ 14+ Years Experience</span>
+        <span class="trust-box">✔ 1000+ Patients Treated</span>
+      </div>
+    </div>
 
-  <input type="text" id="main_name" placeholder="Full Name" required>
-  
-  <input type="tel" id="main_phone" placeholder="Phone Number" required>
-  
-  <input type="text" id="main_problem" placeholder="Your Problem" required>
+    <!-- RIGHT SIDE FORM (🔥 MUST BE HERE) -->
+    <div class="hero-form-box">
 
-  <button type="submit" class="form-btn">
-    Book via WhatsApp
-  </button>
+      <h3>Book Home Visit</h3>
+      <small>⚡ Same Day Appointment Available</small>
 
-</form>
-		
+      <form id="mainWhatsappForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Your Problem" required>
+
+        <button type="submit" class="form-btn">
+          Book via WhatsApp
+        </button>
+      </form>
+
+    </div>
+
   </div>
 </section>
-<div class="section-divider"></div>
+	  
+	  <div class="section-divider"></div>
 
   <div class="wave">
   <svg viewBox="0 0 1440 120">
