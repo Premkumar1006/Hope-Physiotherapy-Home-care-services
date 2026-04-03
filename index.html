@@ -1569,23 +1569,20 @@ button:hover {
 </div>
 		
     <!-- RIGHT FORM -->
-    <div class="hero-form-box">
+    <form id="mainWhatsappForm">
 
-      <h3>Book Your Home Visit</h3>
-      <small>Same Day Appointment Available</small>
+  <input type="text" id="main_name" placeholder="Full Name" required>
+  
+  <input type="tel" id="main_phone" placeholder="Phone Number" required>
+  
+  <input type="text" id="main_problem" placeholder="Your Problem" required>
 
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="text" placeholder="Your Problem (Pain / Stroke / etc)" required>
+  <button type="submit" class="form-btn">
+    Book via WhatsApp
+  </button>
 
-        <button type="submit" class="form-btn">
-          Get Appointment Now
-        </button>
-      </form>
-
-    </div>
-
+</form>
+		
   </div>
 </section>
 <div class="section-divider"></div>
@@ -2074,7 +2071,29 @@ Elderly care physiotherapy plays an important role in promoting active aging by 
 
   </div>
 </div>
-		  
+		  <script>
+
+// MAIN FORM → WhatsApp
+document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  var name = document.getElementById("main_name").value;
+  var phone = document.getElementById("main_phone").value;
+  var problem = document.getElementById("main_problem").value;
+
+  var message = "Hello Doctor,%0A%0A" +
+                "I want to book a physiotherapy appointment.%0A%0A" +
+                "Name: " + name + "%0A" +
+                "Phone: " + phone + "%0A" +
+                "Problem: " + problem + "%0A%0A" +
+                "Please confirm my appointment.";
+
+  var url = "https://wa.me/918897978832?text=" + message;
+
+  window.open(url, "_blank");
+});
+
+</script>
 <footer class="footer">
   <div class="container footer-grid">
 
