@@ -874,47 +874,60 @@ body {
   margin: 20px 0;
 }
 
+/* SECTION */
 .condition-section {
-  padding: 20px 0;
+  margin-bottom: 50px;
 }
 
+/* ROW */
 .condition-row {
   display: flex;
+  gap: 30px;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
 }
 
+/* REVERSE */
 .condition-row.reverse {
   flex-direction: row-reverse;
 }
 
-.condition-image,
-.condition-text {
-  flex: 1 1 450px;
-}
-
+/* IMAGE */
 .condition-image img {
   width: 100%;
-  height: 280px;           /* control rectangle height */
-  object-fit: cover;       /* keeps image nicely cropped */
   border-radius: 20px;
   display: block;
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.08);
 }
+
+/* TEXT */
 .condition-text h2 {
-  font-size: 30px;
-  margin-bottom: 16px;
   color: #0284c7;
+  margin-bottom: 10px;
 }
 
 .condition-text p {
-  font-size: 17px;
-  line-height: 1.8;
-  text-align: justify;
-  color: #334155;
+  line-height: 1.7;
 }
-/* ===== READ MORE ===== */
+
+/* BUTTON */
+.service-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* READ MORE */
+.full-text {
+  display: none;
+}
+
+.full-text.open {
+  display: block;
+}/* ===== READ MORE ===== */
 .full-text {
   max-height: 0;
   overflow: hidden;
@@ -1797,120 +1810,173 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
   </svg>
 </div>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title" style="text-align:center;">
-    <img src="Images/Home image.jpg" alt="Home" 
-         style="width:40px; vertical-align:middle; margin-right:10px;">
-    Home Physiotherapy Services
-</h2>
-      <p class="section-subtitle" style="text-align:center;"> <b><i>(In the comfort of your home)</i></b></p>
-      <div class="services-list">
-  <section class="condition-section">
-  <div class="container condition-row">
-    <div class="condition-image">
-      <img src="Images/neuro rehabilitation.jpg">
-    </div>
-    <div class="condition-text">
-      <h2>Neurological Rehabilitation</h2>
-      <p>Neurological rehabilitation is a specialized physiotherapy program designed to help individuals recover and manage conditions affecting the brain, spinal cord, and nervous system. It is commonly recommended for patients with stroke, spinal cord injuries, Parkinson’s disease, multiple sclerosis, and other neurological disorders....</p>
+<section id="services">
+  <div class="container">
 
-      <div class="full-text">
-        <p>
-       This rehabilitation focuses on improving movement, balance, coordination, strength, and overall functional independence. Treatment plans are personalized and may include therapeutic exercises, balance training, gait training, coordination activities, and techniques to improve muscle control and reduce stiffness.
+    <h2 class="section-title" style="text-align:center;">
+      <img src="Images/Home image.jpg" style="width:40px; vertical-align:middle; margin-right:10px;">
+      Home Physiotherapy Services
+    </h2>
 
-Neurological rehabilitation also helps patients relearn daily activities, enhance mobility, and regain confidence in performing routine tasks. With consistent therapy and guided support, patients can achieve better quality of life, improved independence, and long-term functional recovery.
-        </p>
+    <p class="section-subtitle" style="text-align:center;">
+      <b><i>(In the comfort of your home)</i></b>
+    </p>
+
+    <div class="services-list">
+
+      <!-- 1 -->
+      <div class="condition-section">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/neuro rehabilitation.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Neurological Rehabilitation</h2>
+            <p>
+              Helps recovery from stroke, spinal cord injuries, Parkinson’s and other neurological conditions.
+            </p>
+
+            <div class="full-text">
+              <p>
+                Improves movement, balance, coordination and independence with personalized therapy plans.
+              </p>
+            </div>
+
+            <button onclick="toggleText(this)">Read More</button>
+
+            <a href="https://wa.me/918897978832" class="service-btn">
+              💬 Book This Treatment
+            </a>
+          </div>
+
+        </div>
       </div>
-	<button onclick="toggleText(this)">Read More</button>
-    </div>
-  </div>
-</section>
 
-<section class="condition-section">
-  <div class="container condition-row reverse">
-    <div class="condition-image">
-      <img src="Images/Neurological conditions image.png">
-    </div>
-    <div class="condition-text">
-      <h2>Stroke Rehabilitation</h2>
-      <p>Stroke rehabilitation is a specialized physiotherapy program designed to help individuals recover physical, functional, and cognitive abilities after a stroke. It focuses on restoring movement, strength, balance, coordination, and independence affected by damage to the brain.</p>
+      <!-- 2 -->
+      <div class="condition-section">
+        <div class="condition-row reverse">
 
-<div class="full-text">
+          <div class="condition-image">
+            <img src="Images/Neurological conditions image.png">
+          </div>
 
-<p> The rehabilitation process is tailored to each patient’s needs and may include exercises to improve muscle strength, balance training, gait (walking) training, and coordination activities. It also helps in managing muscle stiffness (spasticity), improving posture, and relearning daily activities such as walking, dressing, and self-care.
+          <div class="condition-text">
+            <h2>Stroke Rehabilitation</h2>
+            <p>
+              Specialized therapy to restore strength, balance and independence after stroke.
+            </p>
 
-Stroke rehabilitation plays a crucial role in enhancing recovery, preventing complications, and improving overall quality of life. With early intervention, consistent therapy, and proper guidance, patients can regain confidence, maximize independence, and return to their daily routines as much as possible.</p>
+            <div class="full-text">
+              <p>
+                Includes gait training, muscle strengthening and daily activity recovery.
+              </p>
+            </div>
+
+            <button onclick="toggleText(this)">Read More</button>
+
+            <a href="https://wa.me/918897978832" class="service-btn">
+              💬 Book This Treatment
+            </a>
+          </div>
+
+        </div>
       </div>
-	<button onclick="toggleText(this)">Read More</button>
+
+      <!-- 3 -->
+      <div class="condition-section">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/Orthopedic rehabilitation.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Post-Surgery Rehabilitation</h2>
+            <p>
+              Helps recovery after surgeries like joint replacement, ligament repair and spine surgery.
+            </p>
+
+            <div class="full-text">
+              <p>
+                Focus on pain relief, mobility, strength and faster healing.
+              </p>
+            </div>
+
+            <button onclick="toggleText(this)">Read More</button>
+
+            <a href="https://wa.me/918897978832" class="service-btn">
+              💬 Book This Treatment
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="condition-section">
+        <div class="condition-row reverse">
+
+          <div class="condition-image">
+            <img src="Images/Cardiac rehabilitation.png">
+          </div>
+
+          <div class="condition-text">
+            <h2>Cardiac Rehabilitation</h2>
+            <p>
+              Safe recovery after heart conditions with monitored exercises and lifestyle guidance.
+            </p>
+
+            <div class="full-text">
+              <p>
+                Improves endurance, heart health and daily activity performance.
+              </p>
+            </div>
+
+            <button onclick="toggleText(this)">Read More</button>
+
+            <a href="https://wa.me/918897978832" class="service-btn">
+              💬 Book This Treatment
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="condition-section">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/Physiotherapy-for-The-Elderly.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Elderly Care Physiotherapy</h2>
+            <p>
+              Improves mobility, balance and strength in elderly patients.
+            </p>
+
+            <div class="full-text">
+              <p>
+                Helps prevent falls, reduce pain and maintain independence.
+              </p>
+            </div>
+
+            <button onclick="toggleText(this)">Read More</button>
+
+            <a href="https://wa.me/918897978832" class="service-btn">
+              💬 Book This Treatment
+            </a>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-
-<section class="condition-section">
-  <div class="container condition-row">
-    <div class="condition-image">
-      <img src="Images/Orthopedic rehabilitation.jpg">
-    </div>
-    <div class="condition-text">
-      <h2>Post-Surgery Rehabilitation</h2>
-      <p>Post-surgery rehabilitation is a specialized physiotherapy program designed to help patients recover safely and effectively after surgical procedures. It focuses on restoring movement, strength, flexibility, and function while reducing pain, swelling, and the risk of complications.</p>
-
-<div class="full-text">
-
-<p>Each rehabilitation plan is tailored to the individual’s condition and type of surgery, such as orthopedic surgeries (joint replacement, ligament repair), spinal procedures, or general surgeries. Treatment may include guided exercises, manual therapy, mobility training, and pain management techniques to promote faster healing and improve overall recovery.
-
-The goal of post-surgery rehabilitation is to help patients regain independence, return to daily activities, and achieve optimal physical function. With proper guidance and consistent therapy, patients can experience a smoother recovery and long-term improvement in their quality of life.</p>
-</div>
-	<button onclick="toggleText(this)">Read More</button>
-    </div>
-  </div>
-</section>
-  </section>
-
-<section class="condition-section">
-  <div class="container condition-row reverse">
-    <div class="condition-image">
-      <img src="Images/Cardiac rehabilitation.png">
-    </div>
-    <div class="condition-text">
-      <h2>Cardiac Rehabilitation</h2>
-      <p>This program includes personalized exercise training, lifestyle modification guidance, heart-healthy education, and continuous monitoring to ensure safe recovery. Patients are guided through structured exercises that improve endurance, strength, and overall functional capacity while maintaining optimal heart function.<p>
-
-<div class="full-text">
-
-<p>Cardiac rehabilitation also emphasizes the importance of healthy habits such as proper diet, stress management, quitting smoking, and maintaining an active lifestyle. It plays a vital role in improving quality of life, increasing confidence, and helping patients return to their daily activities safely and effectively.</p>
-</div>
-	<button onclick="toggleText(this)">Read More</button>
-    
-</div>
-  </div>
-</section>
-  </section>
-
-<section class="condition-section">
-  <div class="container condition-row">
-    <div class="condition-image">
-      <img src="Images/Physiotherapy-for-The-Elderly.jpg">
-    </div>
-    <div class="condition-text">
-      <h2>Elderly care Physiotherapy</h2>
-      <p>Elderly care physiotherapy is a specialized program focused on improving the health, mobility, and overall quality of life of older adults. It addresses age-related conditions such as joint pain, arthritis, balance issues, muscle weakness, and reduced mobility.</p>
-
-<div class="full-text">
-
-<p>This therapy includes gentle exercises, strength training, balance and coordination activities, and mobility improvement techniques tailored to the individual’s needs and physical condition. It also helps in preventing falls, reducing pain, and maintaining independence in daily activities.
-
-Elderly care physiotherapy plays an important role in promoting active aging by enhancing flexibility, endurance, and confidence. With regular therapy and proper guidance, seniors can stay active, manage chronic conditions effectively, and enjoy a better, more independent lifestyle.</p>
-
-</div>
-	<button onclick="toggleText(this)">Read More</button>
-
-    </div>
-  </div>
-</section>
-  </section>
-
 
 <div class="wave">
   <svg viewBox="0 0 1440 120">
