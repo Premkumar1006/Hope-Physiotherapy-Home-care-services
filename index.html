@@ -261,7 +261,9 @@ body {
   background-size: cover;
   padding: 60px 0;
 }
-	  
+	.hero-banner-wrap {
+  align-items: center;
+}  
 
 .hero-left h1 {
   font-size: 52px;
@@ -351,24 +353,33 @@ body {
   font-weight: 600;
 }
 
-.hero-form-box input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+.hero-form-box {
+  flex: 0 1 360px;   /* smaller width */
+  max-width: 380px;  /* limit size */
+  margin: auto;      /* center it */
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.form-btn {
-  background: #0284c7;
-  color: white;
-  padding: 14px;
-  border: none;
+/* INPUT STYLE FIX */
+.hero-form-box input {
+  width: 100%;
+  padding: 12px 14px;
   border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
 }
-.section-divider {
+
+/* BUTTON */
+.form-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+	  .section-divider {
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, transparent, #06b6d4, transparent);
