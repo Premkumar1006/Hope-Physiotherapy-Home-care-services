@@ -1588,15 +1588,14 @@ button:hover {
       <small>⚡ Same Day Appointment Available</small>
 
       <form id="mainWhatsappForm">
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="text" placeholder="Your Problem" required>
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="text" id="problem" placeholder="Your Problem" required>
 
-        <button type="submit" class="form-btn">
-          Book via WhatsApp
-        </button>
-      </form>
-
+  <button type="submit" class="form-btn">
+    Book via WhatsApp
+  </button>
+</form>
     </div>
 
   </div>
@@ -2110,6 +2109,26 @@ document.getElementById("mainWhatsappForm").addEventListener("submit", function(
   window.open(url, "_blank");
 });
 
+</script>
+		  <script>
+document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let problem = document.getElementById("problem").value;
+
+  let message = `Hello Doctor,
+I want to book a home physiotherapy session.
+
+Name: ${name}
+Phone: ${phone}
+Problem: ${problem}`;
+
+  let whatsappURL = `https://wa.me/918897978832?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+});
 </script>
 <footer class="footer">
   <div class="container footer-grid">
