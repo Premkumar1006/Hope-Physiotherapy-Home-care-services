@@ -370,19 +370,14 @@ body {
 }
 
 /* TRUST */
-	  .trust-slider {
-  overflow: hidden;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.trust-track {
+.trust-inline {
   display: flex;
   gap: 12px;
-  width: max-content;
-  animation: scrollTrust 10s linear infinite;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
+/* BASE STYLE */
 .trust-box {
   background: rgba(255,255,255,0.15);
   color: #ffffff;
@@ -390,34 +385,47 @@ body {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-  white-space: nowrap;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.3s ease;
 }
 
-/* Animation */
-@keyframes scrollTrust {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Pause on hover (nice UX) */
-.trust-slider:hover .trust-track {
-  animation-play-state: paused;
-}
-.trust-inline {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
+/* GLOW ANIMATION */
 .trust-box {
-  background: rgba(255,255,255,0.15);
-  padding: 8px 14px;
-  border-radius: 999px;
-  color: #fff;
-  font-size: 14px;
+  animation: glowFade 6s infinite;
 }
 
+/* Delay for each box */
+.trust-box:nth-child(1) {
+  animation-delay: 0s;
+}
+.trust-box:nth-child(2) {
+  animation-delay: 2s;
+}
+.trust-box:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* KEYFRAMES */
+@keyframes glowFade {
+  0% {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1);
+    box-shadow: none;
+  }
+  20% {
+    background: #25D366;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37,211,102,0.7);
+  }
+  40% {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1);
+    box-shadow: none;
+  }
+  100% {
+    background: rgba(255,255,255,0.15);
+  }
+}
 /* FORM */
 .hero-form-box {
   background: #ffffff;
