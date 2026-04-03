@@ -251,6 +251,56 @@ body {
     padding: 10px 18px;
   }
 }
+	  .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.popup-box button {
+  width: 100%;
+  padding: 12px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+	  
     .hero-banner {
   position: relative;
   min-height: 90vh;
@@ -1924,7 +1974,25 @@ Elderly care physiotherapy plays an important role in promoting active aging by 
 
   </div>
 </section>
+<div id="popupForm" class="popup-overlay">
+  <div class="popup-box">
 
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <h3>Book Your Home Visit</h3>
+    <p>⚡ Same Day Appointment Available</p>
+
+    <form id="popupWhatsappForm">
+      <input type="text" id="pname" placeholder="Full Name" required>
+      <input type="tel" id="pphone" placeholder="Phone Number" required>
+      <input type="text" id="pproblem" placeholder="Your Problem" required>
+
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+
+  </div>
+</div>
+		  
 <footer class="footer">
   <div class="container footer-grid">
 
@@ -2015,6 +2083,33 @@ function revealOnScroll() {
     }
   });
 }
+</script>
+		  <script>
+
+// Show popup after 5 seconds
+setTimeout(function() {
+  document.getElementById("popupForm").style.display = "flex";
+}, 5000);
+
+// Close popup
+function closePopup() {
+  document.getElementById("popupForm").style.display = "none";
+}
+
+// WhatsApp submit
+document.getElementById("popupWhatsappForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("pname").value;
+  var phone = document.getElementById("pphone").value;
+  var problem = document.getElementById("pproblem").value;
+
+  var msg = "Hello Doctor,%0A%0AName: "+name+
+            "%0APhone: "+phone+
+            "%0AProblem: "+problem;
+
+  window.open("https://wa.me/918897978832?text=" + msg, "_blank");
+});
 </script>
 </body>
 </html>
