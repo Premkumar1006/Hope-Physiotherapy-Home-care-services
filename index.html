@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<head>
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18022897529"></script>
   <script>
@@ -2329,24 +2328,22 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
 document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  var name = document.getElementById("main_name").value;
-  var phone = document.getElementById("main_phone").value;
-  var problem = document.getElementById("main_problem").value;
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let problem = document.getElementById("problem").value;
 
-  var message = "Hello Doctor,%0A%0A" +
-                "I want to book a physiotherapy appointment.%0A%0A" +
-                "Name: " + name + "%0A" +
-                "Phone: " + phone + "%0A" +
-                "Problem: " + problem + "%0A%0A" +
-                "Please confirm my appointment.";
+  let message = `Hello Doctor,
+I want to book a home physiotherapy session.
 
-  var url = "https://wa.me/918897978832?text=" + message;
+Name: ${name}
+Phone: ${phone}
+Problem: ${problem}`;
 
-  window.open(url, "_blank");
+  let whatsappURL = `https://wa.me/918897978832?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
 });
-
-</script>
-		  <script>
+			  <script>
 document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
