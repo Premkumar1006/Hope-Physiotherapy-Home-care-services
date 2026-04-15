@@ -1742,18 +1742,17 @@ button:hover {
   50%  { transform: translateY(0); }
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
-}.top-call-strip {
+}
+	.top-call-strip {
   background: #22c55e;
   color: white;
-
-  display: flex;
-  justify-content: flex-end; /* 👉 moves content to RIGHT */
-  align-items: center;
 
   padding: 10px 20px;
 
   font-weight: 700;
   font-size: 16px;
+
+  text-align: right; /* 🔥 FORCE RIGHT */
 }
 
 .top-call-strip a {
@@ -1761,9 +1760,6 @@ button:hover {
   text-decoration: none;
   margin-left: 8px;
   font-weight: 800;
-}
-	.top-call-strip {
-  padding-right: 40px; /* gives breathing space */
 }
   </style>
 </head>
