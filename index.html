@@ -1743,22 +1743,28 @@ button:hover {
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
 }
-	.top-call-strip {
+.top-call-strip {
   background: #22c55e;
   color: white;
 
-  padding: 10px 20px;
+  width: 100%;
+  padding: 10px 30px;
 
   font-weight: 700;
   font-size: 16px;
 
-  text-align: right; /* 🔥 FORCE RIGHT */
+  display: flex;
+  justify-content: flex-end; /* 🔥 RIGHT */
+  align-items: center;
+}
+
+.top-call-strip span {
+  margin-right: 6px;
 }
 
 .top-call-strip a {
   color: #fff;
   text-decoration: none;
-  margin-left: 8px;
   font-weight: 800;
 }
   </style>
