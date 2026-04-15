@@ -1655,27 +1655,72 @@ button:hover {
 
 .cta-btn:hover::before {
   left: 125%;
-}
-/* FLOATING CALL BUTTON (DESKTOP ONLY) */
+}/* 🔥 PREMIUM FLOATING CALL BUTTON */
 .hero-call-float {
   position: absolute;
   top: 100px;
   right: 40px;
 
-  background: #ef4444;
+  background: linear-gradient(135deg, #ff0000, #dc2626);
   color: #fff;
 
-  padding: 12px 18px;
-  border-radius: 10px;
+  padding: 14px 22px;
+  border-radius: 50px;
 
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 
-  box-shadow: 0 8px 20px rgba(239,68,68,0.5);
-  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 10px 30px rgba(220,38,38,0.7);
+
+  z-index: 10;
+  overflow: hidden;
+
+  animation: pulseCall 1.5s infinite;
+  transition: all 0.3s ease;
 }
 
-/* HIDE ON MOBILE (VERY IMPORTANT) */
+/* 📞 ICON STYLE */
+.hero-call-float::before {
+  content: "📞";
+  font-size: 16px;
+}
+
+/* ✨ SHINE EFFECT */
+.hero-call-float::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.hero-call-float:hover::after {
+  left: 120%;
+}
+
+/* 🔥 HOVER EFFECT */
+.hero-call-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 40px rgba(220,38,38,1);
+}
+
+/* 💥 PULSE ANIMATION */
+@keyframes pulseCall {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* 📱 MOBILE HIDE */
 @media (max-width: 768px) {
   .hero-call-float {
     display: none;
