@@ -2622,65 +2622,6 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
 
   </div>
 </section>
-<div id="popupForm" class="popup-overlay">
-  <div class="popup-box">
-
-    <span class="close-btn" onclick="closePopup()">×</span>
-
-    <h3>Book Your Home Visit</h3>
-    <p>⚡ Same Day Appointment Available</p>
-
-    <form id="popupWhatsappForm">
-      <input type="text" id="pname" placeholder="Full Name" required>
-      <input type="tel" id="pphone" placeholder="Phone Number" required>
-      <input type="text" id="pproblem" placeholder="Your Problem" required>
-
-      <button type="submit">Book on WhatsApp</button>
-    </form>
-
-  </div>
-</div>
-		  <script>
-
-// MAIN FORM → WhatsApp
-document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let problem = document.getElementById("problem").value;
-
-  let message = `Hello Doctor,
-I want to book a home physiotherapy session.
-
-Name: ${name}
-Phone: ${phone}
-Problem: ${problem}`;
-
-  let whatsappURL = `https://wa.me/918897978832?text=${encodeURIComponent(message)}`;
-
-  window.open(whatsappURL, "_blank");
-});
-			  <script>
-document.getElementById("mainWhatsappForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let problem = document.getElementById("problem").value;
-
-  let message = `Hello Doctor,
-I want to book a home physiotherapy session.
-
-Name: ${name}
-Phone: ${phone}
-Problem: ${problem}`;
-
-  let whatsappURL = `https://wa.me/918897978832?text=${encodeURIComponent(message)}`;
-
-  window.open(whatsappURL, "_blank");
-});
-</script>
 <footer class="footer">
   <div class="container footer-grid">
 
@@ -2771,33 +2712,6 @@ function revealOnScroll() {
     }
   });
 }
-</script>
-		  <script>
-
-// Show popup after 1000 seconds
-setTimeout(function() {
-  document.getElementById("popupForm").style.display = "flex";
-}, 25000);
-
-// Close popup
-function closePopup() {
-  document.getElementById("popupForm").style.display = "none";
-}
-
-// WhatsApp submit
-document.getElementById("popupWhatsappForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  var name = document.getElementById("pname").value;
-  var phone = document.getElementById("pphone").value;
-  var problem = document.getElementById("pproblem").value;
-
-  var msg = "Hello Doctor,%0A%0AName: "+name+
-            "%0APhone: "+phone+
-            "%0AProblem: "+problem;
-
-  window.open("https://wa.me/918897978832?text=" + msg, "_blank");
-});
 </script>
 </body>
 </html>
