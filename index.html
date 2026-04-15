@@ -1743,39 +1743,6 @@ button:hover {
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
 }
-.top-call-strip {
-  position: relative; /* base */
-  height: 0; /* no space taken */
-}
-
-/* 🔥 THIS IS THE REAL ELEMENT */
-.top-call-strip a {
-  position: absolute;
-  right: 30px;   /* 👉 RIGHT SIDE */
-  top: 10px;     /* adjust height */
-
-  background: #22c55e;
-  color: #fff;
-
-  padding: 8px 14px;
-  border-radius: 6px;
-
-  font-weight: 700;
-  text-decoration: none;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-/* mobile center */
-@media (max-width: 768px) {
-  .top-call-strip a {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    top: 5px;
-  }
-}
   </style>
 </head>
 <body>
