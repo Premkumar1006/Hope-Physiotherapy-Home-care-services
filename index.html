@@ -35,6 +35,30 @@
       font-size: 14px;
       padding: 10px 0;
     }
+	  .mobile-call {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-call {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #dc2626;
+    text-align: center;
+    padding: 12px;
+    z-index: 9999;
+  }
+
+  .mobile-call a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
     .top-bar .container,
     .header .container,
     .hero,
@@ -1800,7 +1824,9 @@ button:hover {
     <div class="hero-call">
       📞 <a href="tel:+918897978832">+91 8897978832</a>
     </div>
-
+<div class="mobile-call">
+  <a href="tel:+918897978832">📞 Call Now</a>
+</div>
     <!-- LEFT SIDE -->
     <div class="hero-left">
 
