@@ -25,8 +25,8 @@
     a { text-decoration: none; color: inherit; }
     .container {
   width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
   padding: 0 10px;
 }
     .top-bar {
@@ -152,7 +152,10 @@ body {
 .main-header {
   position: relative;
 }
-
+header {
+  position: relative;
+  z-index: 1000;
+}
 .main-header::after {
   content: "";
   position: absolute;
@@ -390,6 +393,7 @@ body {
 .hero-banner {
   position: relative;
   min-height: 90vh;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
@@ -409,7 +413,11 @@ body {
 .hero-banner {
   position: relative; /* this is key */
 }
-
+@media (max-width: 768px) {
+  .hero-call {
+    display: none;   /* 🔥 important */
+  }
+}
 .hero-call {
   position: absolute;
   top: 20px;
@@ -2134,7 +2142,7 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
       </div>
 
       <!-- 3 -->
-      <div class="condition-section" style="margin-bottom:50px;">>
+      <div class="condition-section" style="margin-bottom:50px;">
         <div class="condition-row">
 
           <div class="condition-image">
