@@ -1743,19 +1743,28 @@ button:hover {
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
 }
-	.top-call-strip {
+.top-call-strip {
   background: #22c55e;
   color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 15px;
+
+  font-weight: 700; /* more bold */
+  font-size: 16px;  /* slightly bigger */
+
   text-align: center;
-  padding: 8px 10px;
-  font-weight: 600;
-  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 .top-call-strip a {
   color: #fff;
   text-decoration: none;
-  margin-left: 5px;
+  margin-left: 8px;
+  font-weight: 800; /* highlight number */
 }
   </style>
 </head>
@@ -1800,9 +1809,9 @@ button:hover {
   </div>
 </header>
 <div class="top-call-strip">
-  📞 Call Now: <a href="tel:+918897978832">+91 8897978832</a>
-</div>
-  <section class="hero-banner">
+  <span>📞</span> Call Now:
+  <a href="tel:+918897978832">+91 8897978832</a>
+</div>  <section class="hero-banner">
   <div class="container hero-banner-wrap">
 
     <!-- LEFT SIDE -->
