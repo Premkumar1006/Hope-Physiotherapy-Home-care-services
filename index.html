@@ -1742,31 +1742,53 @@ button:hover {
   50%  { transform: translateY(0); }
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
-}.top-call-strip {
+}
+	/* MAIN STRIP */
+.top-call-strip {
   background: #22c55e;
   color: white;
   padding: 10px 0;
+
+  position: sticky;   /* 🔥 sticky */
+  top: 0;
+  z-index: 999;
 }
 
-/* 🔥 IMPORTANT FIX */
+/* INNER ALIGNMENT */
 .call-inner {
   display: flex;
-  justify-content: space-between; /* spread full width */
+  justify-content: flex-end; /* 👉 Desktop RIGHT */
   align-items: center;
 
-  width: 100%;
+  font-weight: 700;
+  font-size: 15px;
 }
 
-/* push content to RIGHT */
-.call-inner span {
-  margin-left: auto;
-}
-
+/* LINK STYLE */
 .call-inner a {
   color: #fff;
   text-decoration: none;
-  margin-left: 8px;
-  font-weight: 800;
+  background: #16a34a;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.call-inner a:hover {
+  background: #15803d;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .call-inner {
+    justify-content: center; /* 👉 CENTER on mobile */
+  }
+
+  .call-inner a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }
   </style>
 </head>
