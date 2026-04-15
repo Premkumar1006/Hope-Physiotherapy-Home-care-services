@@ -1742,29 +1742,28 @@ button:hover {
   50%  { transform: translateY(0); }
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
-}
-.top-call-strip {
+}.top-call-strip {
   background: #22c55e;
   color: white;
 
   display: flex;
-  justify-content: right;
+  justify-content: flex-end; /* 👉 moves content to RIGHT */
   align-items: center;
 
-  padding: 10px 15px;
+  padding: 10px 20px;
 
-  font-weight: 700; /* more bold */
-  font-size: 16px;  /* slightly bigger */
-
-  text-align: right;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .top-call-strip a {
   color: #fff;
   text-decoration: none;
   margin-left: 8px;
-  font-weight: 800; /* highlight number */
+  font-weight: 800;
+}
+	.top-call-strip {
+  padding-right: 40px; /* gives breathing space */
 }
   </style>
 </head>
