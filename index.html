@@ -47,6 +47,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+.call-btn-advanced {
+  background: linear-gradient(135deg, #ff0000, #dc2626);
+  color: #fff;
+  padding: 16px 26px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 17px;
+  text-decoration: none;
+  display: inline-block;
+
+  box-shadow: 0 10px 25px rgba(220,38,38,0.6);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: pulseCall 1.5s infinite;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.call-btn-advanced:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(220,38,38,0.9);
+}
+
+/* SHINE EFFECT */
+.call-btn-advanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.call-btn-advanced:hover::before {
+  left: 120%;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulseCall {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -1723,63 +1771,110 @@ button:hover {
 
     <!-- LEFT SIDE -->
     <div class="hero-left">
-      <h1>Struggling with Pain, Mobility, Post-Surgery or Neurological Issues?</h1>
 
-      
-        <h1 style="font-size:36px; font-weight:bold;">
-  <span style="color:#0b5ed7;">Expert Physiotherapy</span> 
-  at Home in 
-  <span style="
-    color:#28a745;
-    text-shadow: 
-      1px 1px 0 #1e7e34,
-      2px 2px 0 #1e7e34,
-      3px 3px 0 #1e7e34,
-      4px 4px 0 #1e7e34,
-      5px 5px 10px rgba(0,0,0,0.4);
-    font-weight:900;
-  ">
-    Hyderabad
-  </span>
+      <h1 style="font-size:48px;">
+  Home Physiotherapy in Hyderabad
 </h1>
 
-      <!-- buttons -->
-      <div class="hero-buttons">
-        <a href= "https://wa.me/918897978832?text="; class="btn-whatsapp">
-  💬 Get Instant Help on WhatsApp
-</a>
-        <a href="tel:918897978832" class="btn-call">
-  📞 Speak to Doctor Now
-</a>
-      </div>
+<p style="
+  font-size:16px;
+  font-weight:bold;
+  color:#22c55e;
+  margin-top:8px;
+">
+  ✔ 14+ Years Experience | ✔ 1000+ Patients Treated
+</p>
+      <p style="font-size:20px; font-weight:bold; color:#facc15;">
+        ⚡ <u>Same Day Visit Available | Limited Slots Today</u>
+      </p>
 
-      <!-- trust -->
+      <p>
+        <b>Get expert treatment for back pain, stroke recovery, post-surgery rehabilitation & mobility issues — at your home.</b>
+      </p>
+
+      <!-- ACTION BUTTONS -->
+      <div class="hero-buttons">
+
+        <a href="tel:+918897978832" class="call-btn-advanced">
+  📞 Call Now – Instant Booking
+    </a>
+<span style="
+  font-size:16px;
+  font-weight:bold;
+  color:#166534;
+  background:#dcfce7;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #22c55e;
+">
+  💰 Starting from ₹799
+</span>        <a href="https://wa.me/918897978832?text=Hello Doctor, I need physiotherapy at home" class="btn-whatsapp">
+          💬 WhatsApp Now – Quick Response
+        </a>
+<p style="color:#22c55e; font-weight:bold; margin-top:10px;">
+⚡ Talk to your Doctor in 30 Seconds
+</p>      </div>
+
+      <!-- TRUST -->
       <div class="trust-inline">
-        <span class="trust-box">⭐ 5 Star Rated Care</span>
+        <span class="trust-box">⭐ 5 Star Rated</span>
         <span class="trust-box">✔ 14+ Years Experience</span>
         <span class="trust-box">✔ 1000+ Patients Treated</span>
       </div>
+
     </div>
 
-    <!-- RIGHT SIDE FORM (🔥 MUST BE HERE) -->
+    <!-- RIGHT SIDE (SIMPLIFIED FORM) -->
     <div class="hero-form-box">
 
       <h3>Book Home Visit</h3>
-      <small>⚡ Same Day Appointment Available</small>
+      <small>⚡ Get Callback in 5 Minutes</small>
 
-      <form id="mainWhatsappForm">
-  <input type="text" id="name" placeholder="Full Name" required>
-  <input type="tel" id="phone" placeholder="Phone Number" required>
-  <input type="text" id="problem" placeholder="Your Problem" required>
+      <form onsubmit="window.location.href='tel:+918897978832'; return false;">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
 
-  <button type="submit" class="form-btn">
-    Book via WhatsApp
-  </button>
-</form>
+        <button class="form-btn">
+          📞 Get Call Back Now
+        </button>
+      </form>
+
     </div>
 
   </div>
 </section>
+<section style="padding:40px 0; text-align:center; background:#f0f9ff;">
+  <h2 style="font-size:28px;">Trusted Home Physiotherapy Service in Hyderabad</h2>
+
+  <p style="margin-top:10px;">
+    Helping patients recover from pain, injury, stroke and surgery with expert care at home.
+  </p>
+
+  <div style="margin-top:20px;">
+    ⭐⭐⭐⭐⭐ Rated by Patients  
+    | 🧑‍⚕️ Expert Physiotherapist  
+    | 🏠 Home Visit Available
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container">
+
+    <div class="cta-box">
+
+      <h2>Need Physiotherapy at Home?</h2>
+
+      <p>Talk to a doctor now and book your session instantly.</p>
+
+      <div class="cta-buttons">
+        <a href="tel:+918897978832" class="btn btn-call">📞 Call Now</a>
+        <a href="https://wa.me/918897978832" class="btn-whatsapp">💬 WhatsApp Now</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 	  
 	  <div class="section-divider"></div>
 
@@ -1824,6 +1919,20 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
   </div>
 </section>
 
+<section style="padding:40px; background:#fff;">
+  <div class="container" style="text-align:center;">
+
+    <h2>Why Patients Choose Us</h2>
+
+    <p style="margin-top:10px;">
+      ✔ 14+ Years Experience  
+      ✔ Personalized Home Treatment  
+      ✔ Fast Recovery Plans  
+      ✔ Trusted by 1000+ Patients  
+    </p>
+
+  </div>
+</section>class="btn-call"
 <div class="section-divider"></div>
 
 <div class="wave">
@@ -1857,20 +1966,24 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
           <div class="condition-text">
             <h2>Neurological Rehabilitation</h2>
             <p>
-              Helps recovery from stroke, spinal cord injuries, Parkinson’s and other neurological conditions.
-            </p>
+✔ Stroke recovery & neurological rehab  
+✔ Improves balance, walking & coordination  
+✔ Personalized therapy at home  
+✔ Faster recovery with expert guidance  
+</p>
 
-            <div class="full-text">
-              <p>
-                Improves movement, balance, coordination and independence with personalized therapy plans.
-              </p>
+<p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+Best for: Spinal Cord Injuries, Parkinson’s, Peripheral nerve injuries...etc
+</p>
+<p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+✔ Home visit available | Same-day booking
+</p>
             </div>
-
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Regain movement and independence with expert neuro rehabilitation
+</p>
             <button onclick="toggleText(this)">Read More</button>
 
-            <a href="https://wa.me/918897978832" class="service-btn">
-              💬 Book This Treatment
-            </a>
           </div>
 
         </div>
@@ -1887,20 +2000,24 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
           <div class="condition-text">
             <h2>Stroke Rehabilitation</h2>
             <p>
-              Specialized therapy to restore strength, balance and independence after stroke.
-            </p>
+✔ Improves walking, balance & daily movement  
+✔ Helps regain strength after stroke  
+✔ Personalized therapy at home  
+✔ Supports faster recovery & independence  
+</p>
 
-            <div class="full-text">
-              <p>
-                Includes gait training, muscle strengthening and daily activity recovery.
-              </p>
+<p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+Best for: Stroke patients with weakness, paralysis, or balance issues
+</p>
+
+<p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+✔ Home visit available | Same-day booking
+</p>
             </div>
-
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Early therapy improves walking, strength and independence after stroke
+</p>
             <button onclick="toggleText(this)">Read More</button>
-
-            <a href="https://wa.me/918897978832" class="service-btn">
-              💬 Book This Treatment
-            </a>
           </div>
 
         </div>
@@ -1917,20 +2034,25 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
           <div class="condition-text">
             <h2>Post-Surgery Rehabilitation</h2>
             <p>
-              Helps recovery after surgeries like joint replacement, ligament repair and spine surgery.
-            </p>
+✔ Faster recovery after surgery  
+✔ Improves joint movement & flexibility  
+✔ Reduces stiffness and mobility issues  
+✔ Personalized rehab at home for safe healing  
+</p>
 
-            <div class="full-text">
-              <p>
-                Focus on pain relief, mobility, strength and faster healing.
-              </p>
+<p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+Best for: Knee replacement, hip surgery, ligament repair, spine surgery
+</p>
+
+<p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+✔ Home visit available | Same-day booking
+</p>
             </div>
-
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Early rehabilitation ensures faster and safer recovery
+</p>
             <button onclick="toggleText(this)">Read More</button>
-
-            <a href="https://wa.me/918897978832" class="service-btn">
-              💬 Book This Treatment
-            </a>
+ss            
           </div>
 
         </div>
@@ -1947,20 +2069,25 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
           <div class="condition-text">
             <h2>Cardiac Rehabilitation</h2>
             <p>
-              Safe recovery after heart conditions with monitored exercises and lifestyle guidance.
-            </p>
+✔ Safe and monitored exercises for heart recovery  
+✔ Improves stamina, breathing & daily activity levels  
+✔ Reduces risk of future heart complications  
+✔ Personalized rehab plan at home with expert care  
+</p>
 
-            <div class="full-text">
-              <p>
-                Improves endurance, heart health and daily activity performance.
-              </p>
+<p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+Best for: Heart surgery recovery, cardiac patients, low endurance, post-hospital rehab
+</p>
+
+<p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+✔ Home visit available | Same-day booking
+</p>
             </div>
-
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Safe physiotherapy improves heart strength and recovery
+</p>
             <button onclick="toggleText(this)">Read More</button>
-
-            <a href="https://wa.me/918897978832" class="service-btn">
-              💬 Book This Treatment
-            </a>
+           
           </div>
 
         </div>
@@ -1977,20 +2104,24 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
           <div class="condition-text">
             <h2>Elderly Care Physiotherapy</h2>
             <p>
-              Improves mobility, balance and strength in elderly patients.
-            </p>
+✔ Improves walking, balance & daily independence  
+✔ Reduces risk of falls and injuries  
+✔ Gentle, safe exercises for elderly patients  
+✔ Personalized care at home for comfort and safety  
+</p>
 
-            <div class="full-text">
-              <p>
-                Helps prevent falls, reduce pain and maintain independence.
-              </p>
+<p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+Best for: Elderly patients with weakness, balance issues, joint pain or mobility problems
+</p>
+
+<p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+✔ Home visit available | Same-day booking
+</p>
             </div>
-
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Helping seniors stay active, independent and safe at home
+</p>
             <button onclick="toggleText(this)">Read More</button>
-
-            <a href="https://wa.me/918897978832" class="service-btn">
-              💬 Book This Treatment
-            </a>
           </div>
 
         </div>
