@@ -1965,6 +1965,83 @@ button:hover {
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
 }
+	.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* PRIMARY BUTTON (GREEN) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #6fa89a;
+  color: #fff;
+  padding: 7px 11px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ICON CIRCLE */
+.btn-primary .icon {
+  background: #1f4d43;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.btn-primary:hover {
+  background: #5c9486;
+}
+
+.btn-primary:hover .icon {
+  transform: translateX(5px);
+  background: #163d35;
+}
+
+
+/* SECONDARY BUTTON (WHITE) */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #1f4d43;
+  padding: 7px 11px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 300;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.btn-secondary .icon {
+  background: #1f4d43;
+  color: #fff;
+  border-radius: 25%;
+  margin-left: 10px;
+  padding: 7px 9px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.btn-secondary:hover {
+  background: #f5f5f5;
+}
+
+.btn-secondary:hover .icon {
+  transform: translateX(5px);
+}
   </style>
 </head>
 
@@ -2047,7 +2124,19 @@ button:hover {
     Book Home Visit @ ₹799 / session
   </a>
 </div>
+<div class="btn-group">
 
+  <a href="#" class="btn-primary">
+    <span class="text">Explore Services</span>
+    <span class="icon">→</span>
+  </a>
+
+  <a href="#" class="btn-secondary">
+    <span class="text">Book Appointment</span>
+    <span class="icon">→</span>
+  </a>
+
+</div>
 <p class="same-day">
   ⚡ Same Day Visit Available | Limited Slots Today
 </p>
