@@ -1735,7 +1735,54 @@ button:hover {
 .cta-btn {
   animation: pulseGlow 2s infinite;
 }
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #6fa89a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
 
+/* Arrow circle */
+.btn-pill .arrow {
+  background: #1f4d43;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-pill:hover {
+  transform: translateY(-2px);
+  background: #5c9486;
+}
+
+.btn-pill:hover .arrow {
+  transform: translateX(5px);
+  background: #163d35;
+}
+	.btn-pill.light {
+  background: white;
+  color: #1f4d43;
+  border: 1px solid #ddd;
+}
+
+.btn-pill.light .arrow {
+  background: #1f4d43;
+  color: white;
+}
+
+.btn-pill.light:hover {
+  background: #f5f5f5;
+}
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
   50% { box-shadow: 0 0 20px rgba(255,255,255,0.2); }
@@ -1838,9 +1885,16 @@ button:hover {
   <span class="badge">⭐ 5 Star Rated</span>
 </div>
       <p>
-        <h2>Expert Physiotherapy at Home in Hyderabad.  
-			Book Appointment for Home Visit  </h2>
-      </p>
+        <a href="#" class="btn-pill">
+  Explore Services
+  <span class="arrow">→</span>
+</a>
+
+<a href="#" class="btn-pill light">
+  Book Appointment
+  <span class="arrow">→</span>
+</a>
+		  
 <p style="
   font-size:15px;
   font-weight:bold;
