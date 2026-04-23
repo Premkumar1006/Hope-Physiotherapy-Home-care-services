@@ -412,7 +412,84 @@ body {
   margin-bottom: 20px;
   color: rgba(255,255,255,0.95);
 }
+/* Glow Animation */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
 
+/* PRIMARY BUTTON (GREEN) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #6fa89a;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ICON CIRCLE */
+.btn-primary .icon {
+  background: #1f4d43;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.btn-primary:hover {
+  background: #5c9486;
+}
+
+.btn-primary:hover .icon {
+  transform: translateX(5px);
+  background: #163d35;
+}
+
+
+/* SECONDARY BUTTON (WHITE) */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #1f4d43;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.btn-secondary .icon {
+  background: #1f4d43;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.btn-secondary:hover {
+  background: #f5f5f5;
+}
+
+.btn-secondary:hover .icon {
+  transform: translateX(5px);
+}
 /* URGENCY TEXT */
 .urgency {
   color: #facc15;
@@ -1729,85 +1806,6 @@ button:hover {
 .whatsapp-btn {
   background: linear-gradient(135deg, #25D366, #128C7E);
   box-shadow: 0 10px 25px rgba(37,211,102,0.4);
-}
-
-/* Glow Animation */
-.btn-group {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-/* PRIMARY BUTTON (GREEN) */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  background: #6fa89a;
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* ICON CIRCLE */
-.btn-primary .icon {
-  background: #1f4d43;
-  border-radius: 50%;
-  margin-left: 10px;
-  padding: 8px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT */
-.btn-primary:hover {
-  background: #5c9486;
-}
-
-.btn-primary:hover .icon {
-  transform: translateX(5px);
-  background: #163d35;
-}
-
-
-/* SECONDARY BUTTON (WHITE) */
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  color: #1f4d43;
-  padding: 14px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-/* ICON */
-.btn-secondary .icon {
-  background: #1f4d43;
-  color: #fff;
-  border-radius: 50%;
-  margin-left: 10px;
-  padding: 8px 10px;
-  transition: all 0.3s ease;
-}
-
-/* HOVER */
-.btn-secondary:hover {
-  background: #f5f5f5;
-}
-
-.btn-secondary:hover .icon {
-  transform: translateX(5px);
 }
 	@keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
