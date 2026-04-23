@@ -548,27 +548,29 @@ body {
   align-items: center;
   gap: 15px;
   margin-top: 10px;
-  flex-wrap: wrap; /* mobile safety */
+  flex-wrap: wrap;
 }
 
+/* PRICE BESIDE BUTTON */
+.price-inline {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd60a;
+}
+
+.price-inline span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* SAME DAY BELOW */
 .same-day {
+  margin-top: 8px;
   font-size: 16px;
   font-weight: bold;
   color: #facc15;
 }
-/* PRICE TEXT */
-.price-text {
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #fff; /* change based on background */
-}
-
-.price-text span {
-  font-size: 16px;
-  font-weight: normal;
-}
-/* BUTTONS */
+	  /* BUTTONS */
 .hero-buttons {
   display: flex;
   gap: 12px;
@@ -1985,8 +1987,8 @@ button:hover {
       </p>
 
 		<p class="trust-line">
-  With 14+ Years of Experience, Advanced Treatment Methods & a Patient-First Approach,
-  We Deliver Personalized Physiotherapy Care at Your Home.
+  <b></b>With 14+ Years of Experience, Advanced Treatment Methods and a Patient-First Approach,
+  We Deliver Personalized Physiotherapy Care at Your Home.</b>
 		</p>
 		
       <div class="badge-container">
@@ -1996,20 +1998,20 @@ button:hover {
       </div>
 
       <div class="cta-row">
+
   <a href="tel:+918897978832" class="btn-yellow">
-    Book An Appointment
+    Book Home Visit
   </a>
 
-  <p class="same-day">
-    ⚡ Same Day Visit Available
+  <p class="price-inline">
+    💰 ₹799 <span>/ session</span>
   </p>
+
 </div>
-      <div class="pricing-section">
-        <p class="price-text">
-          <span class="amount">₹799</span>
-          <span class="duration">/ per session</span>
-        </p>
-      </div>
+
+<p class="same-day">
+  ⚡ Same Day Visit Available | Limited Slots Today
+</p>
      
     </div>
 
