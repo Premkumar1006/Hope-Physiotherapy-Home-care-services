@@ -543,7 +543,19 @@ body {
   background: #ffcc00;
   transform: translateY(-2px);
 }
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap; /* mobile safety */
+}
 
+.same-day {
+  font-size: 16px;
+  font-weight: bold;
+  color: #facc15;
+}
 /* PRICE TEXT */
 .price-text {
   font-size: 28px;
@@ -1754,7 +1766,12 @@ button:hover {
 
   animation: shine 2s linear infinite, glow 1.2s ease-in-out infinite !important;
 }
-
+@media (max-width: 600px) {
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @keyframes shine {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -1978,12 +1995,15 @@ button:hover {
         <span class="badge">⭐ 5 Star Rated</span>
       </div>
 
-      <a href="tel:+918897978832" class="btn-yellow">
-        Book An Appointment
-      </a><p style="font-size:20px; font-weight:bold; color:#facc15;">
-        ⚡ <u>Same Day Visit Available | Limited Slots Today</u>
-      </p>
+      <div class="cta-row">
+  <a href="tel:+918897978832" class="btn-yellow">
+    Book An Appointment
+  </a>
 
+  <p class="same-day">
+    ⚡ Same Day Visit Available
+  </p>
+</div>
       <div class="pricing-section">
         <p class="price-text">
           <span class="amount">₹799</span>
