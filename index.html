@@ -1810,18 +1810,22 @@ button:hover {
 }
 
 .badge {
-    display: inline-block;
-    background: #e6f4ea;
-    color: #e63946;
-    padding: 8px 14px;
-    margin: 5px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
+  display: inline-block;
+  background: #16a34a;   /* green */
+  color: #ffffff;        /* white text */
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #16a34a;  /* for hover outline */
+  transition: all 0.3s ease;
 }
-  .badge:hover {
-  background: linear-gradient(45deg, #16a34a, #4ade80);
-  color: #fff;
+
+/* HOVER → WHITE */
+.badge:hover {
+  background: #ffffff;   /* white */
+  color: #16a34a;        /* green text */
   transform: translateY(-2px);
 }
 	  /* Base Button */
