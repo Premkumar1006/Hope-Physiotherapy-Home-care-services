@@ -511,22 +511,28 @@ body {
   font-weight: 700;
   margin-bottom: 15px;
 }
+/* ================= PRICE SECTION ================= */
 .pricing-section {
   margin-top: 20px;
 }
+
 .price-text {
   margin-top: 12px;
 }
+
+/* BIG PRICE (if used separately) */
 .amount {
   font-size: 52px;
   font-weight: 900;
-  color: #ffd60a; /* yellow highlight */
+  color: #ffd60a;
 }
+
 .duration {
   font-size: 18px;
   color: #fff;
 }
- /* YELLOW BUTTON */
+
+/* ================= BUTTON ================= */
 .btn-yellow {
   display: inline-block;
   background: #ffd60a;
@@ -538,17 +544,18 @@ body {
   transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT */
 .btn-yellow:hover {
   background: #ffcc00;
   transform: translateY(-2px);
 }
+
+/* ================= CTA ROW (BUTTON + PRICE) ================= */
 .cta-row {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: nowrap; /* keep in same line */
 }
 
 /* PRICE BESIDE BUTTON */
@@ -556,20 +563,42 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #ffd60a;
+  white-space: nowrap; /* prevent line break */
 }
 
 .price-inline span {
   font-size: 14px;
   font-weight: normal;
+  color: #fff;
 }
 
-/* SAME DAY BELOW */
+/* ================= SAME DAY TEXT ================= */
 .same-day {
   margin-top: 8px;
   font-size: 16px;
   font-weight: bold;
   color: #facc15;
 }
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 600px) {
+
+  .cta-row {
+    flex-direction: row;       /* keep side-by-side */
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-yellow {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .price-inline {
+    font-size: 16px;
+  }
+
+}	
 	  /* BUTTONS */
 .hero-buttons {
   display: flex;
