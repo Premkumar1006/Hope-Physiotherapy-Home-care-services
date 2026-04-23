@@ -641,8 +641,8 @@ body {
 
 /* FORM */
 .hero-form-box {
-  flex: 0 0 360px;
-  max-width: 360px;
+  flex: 0 0 460px;
+  max-width: 460px;
   margin-left: auto;
 
   background: #ffffff;
@@ -2042,6 +2042,16 @@ button:hover {
 .btn-secondary:hover .icon {
   transform: translateX(5px);
 }
+.form-price {
+  background: #ffd60a;
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 12px;
+}
   </style>
 </head>
 
@@ -2131,12 +2141,7 @@ button:hover {
   </a>
 
 </div>
-
-      <div class="cta-row">
-  <a href="tel:+918897978832" class="btn-yellow">
-    Book Home Visit @ ₹799 / session
-  </a>
-</div>
+     
 <p class="same-day">
   ⚡ Same Day Visit Available | Limited Slots Today
 </p>
@@ -2147,18 +2152,22 @@ button:hover {
 
       <div class="hero-form-box">
 
-        
-  
-        <small>⚡ Get Callback in 5 Minutes</small>
+  <!-- PRICE TOP -->
+  <div class="form-price">
+    
+  </div>
 
-        <form onsubmit="window.location.href='tel:+918897978832'; return false;">
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Phone Number" required>
+  <h3>💰 Book Home Visit @ ₹799</h3>
+  <small>⚡ Get Callback in 5 Minutes</small>
 
-          <button class="form-btn">
-            📞 Get Call Back Now
-          </button>
-        </form>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <button class="form-btn">
+      📞 Get Call Back Now
+    </button>
+  </form>
 <div class="hero-buttons">
         <a href="tel:+918897978832" class="call-btn-advanced">
           📞 Call Now – Instant Booking
