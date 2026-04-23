@@ -1908,8 +1908,10 @@ button:hover {
     white-space: nowrap; /* keep ₹799 in one line */
   }
 
-  .cta-row {
-  flex-direction: column;
+ .cta-row {
+  flex-direction: row;     /* 🔥 keep side-by-side */
+  align-items: center;
+  flex-wrap: nowrap;
 }
   .cta-btn {
     text-align: center;
@@ -2000,7 +2002,7 @@ button:hover {
       </p>
 
 		<p class="trust-line">
-  <b></b>With 14+ Years of Experience, Advanced Treatment Methods and a Patient-First Approach,
+  <b>With 14+ Years of Experience, Advanced Treatment Methods and a Patient-First Approach,
   We Deliver Personalized Physiotherapy Care at Your Home.</b>
 		</p>
 		
