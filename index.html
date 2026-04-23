@@ -254,25 +254,40 @@ body {
   gap: 12px;
 }
 
-.btn {
-  display: inline-block;
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  padding: 12px 22px;
-  border-radius: 10px;
-  font-weight: 700;
-  transition: 0.3s ease;
+  display: inline-block;
+  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #14b8a6, #06b6d4);
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(6, 182, 212, 0.22);
+/* SLIDE EFFECT */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #06b6d4, #14b8a6);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+/* HOVER */
+.btn-primary:hover::before {
+  left: 0;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
 }
-
 .whatsapp-btn {
   width: 42px;
   height: 42px;
@@ -319,7 +334,7 @@ body {
     padding: 10px 18px;
   }
 }
-	  .popup-overlay {
+  .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -428,23 +443,25 @@ body {
   margin-top: 30px;
 }
 
-/* PRIMARY BUTTON (GREEN) */
-.btn-primary {
+/* PRIMARY + SECONDARY SAME STYLE */
+.btn-primary,
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   background: #6fa89a;
   color: #fff;
-  padding: 14px 22px;
-  border-radius: 50px;
+  padding: 10px 14px;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-/* ICON CIRCLE */
-.btn-primary .icon {
+/* ICON (FIXED SELECTOR) */
+.btn-primary .icon,
+.btn-secondary .icon {
   background: #1f4d43;
   border-radius: 50%;
   margin-left: 10px;
@@ -455,50 +472,19 @@ body {
   transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT */
-.btn-primary:hover {
+/* HOVER */
+.btn-primary:hover,
+.btn-secondary:hover {
   background: #5c9486;
+  transform: translateY(-2px);
 }
 
-.btn-primary:hover .icon {
+.btn-primary:hover .icon,
+.btn-secondary:hover .icon {
   transform: translateX(5px);
   background: #163d35;
 }
-
-
-/* SECONDARY BUTTON (WHITE) */
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  color: #1f4d43;
-  padding: 14px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-/* ICON */
-.btn-secondary .icon {
-  background: #1f4d43;
-  color: #fff;
-  border-radius: 50%;
-  margin-left: 10px;
-  padding: 8px 10px;
-  transition: all 0.3s ease;
-}
-
-/* HOVER */
-.btn-secondary:hover {
-  background: #f5f5f5;
-}
-
-.btn-secondary:hover .icon {
-  transform: translateX(5px);
-}
-	.trust-line {
+  .trust-line {
   font-size: 16px;
   color: #ddd;   /* use #333 if white background */
   margin-top: 12px;
@@ -1866,9 +1852,10 @@ button:hover {
   transition: 0.6s;
 }
 
-.cta-btn:hover::before {
+  .cta-btn:hover::before {
   left: 125%;
-.hero-call-float {
+}
+ .hero-call-float {
   position: absolute;
   top: 100px;
   right: 40px;
@@ -1965,82 +1952,11 @@ button:hover {
   70%  { transform: translateY(-7px); }
   100% { transform: translateY(0); }
 }
-	.btn-group {
+  .btn-group {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
-}
-
-/* PRIMARY BUTTON (GREEN) */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  background: #6fa89a;
-  color: #fff;
-  padding: 7px 11px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 300;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* ICON CIRCLE */
-.btn-primary .icon {
-  background: #1f4d43;
-  border-radius: 50%;
-  margin-left: 10px;
-  padding: 8px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT */
-.btn-primary:hover {
-  background: #5c9486;
-}
-
-.btn-primary:hover .icon {
-  transform: translateX(5px);
-  background: #163d35;
-}
-
-
-/* SECONDARY BUTTON (WHITE) */
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  color: #1f4d43;
-  padding: 7px 11px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 300;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-/* ICON */
-.btn-secondary .icon {
-  background: #1f4d43;
-  color: #fff;
-  border-radius: 25%;
-  margin-left: 10px;
-  padding: 7px 9px;
-  transition: all 0.3s ease;
-}
-
-/* HOVER */
-.btn-secondary:hover {
-  background: #f5f5f5;
-}
-
-.btn-secondary:hover .icon {
-  transform: translateX(5px);
 }
 .form-price {
   background: #ffd60a;
@@ -2051,6 +1967,31 @@ button:hover {
   border-radius: 8px;
   text-align: center;
   margin-bottom: 12px;
+}
+.btn-yellow {
+  display: inline-block;
+  background: #ffd60a;
+  color: #000;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 214, 10, 0.4);
+}
+
+/* HOVER */
+.btn-yellow:hover {
+  background: #ffcc00;
+  transform: translateY(-2px) scale(1.03);
+}
+.price-tag {
+  margin-left: 6px;
+  background: #000;
+  color: #ffd60a;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
 }
   </style>
 </head>
@@ -2130,13 +2071,13 @@ button:hover {
       </div>
 <div class="btn-group">
 
-  <a href="#" class="btn-primary">
+  <a href="#services" class="btn-primary">
     <span class="text">Explore Services</span>
     <span class="icon">→</span>
   </a>
 
-  <a href="#" class="btn-secondary">
-    <span class="text">Book Appointment</span>
+  <a href="#about" class="btn-secondary">
+    <span class="text">About us</span>
     <span class="icon">→</span>
   </a>
 
@@ -2152,14 +2093,10 @@ button:hover {
 
       <div class="hero-form-box">
 
-  <!-- PRICE TOP -->
-  <div class="form-price">
-    
-  </div>
-
-  <h3>💰 Book Home Visit @ ₹799</h3>
-  <small>⚡ Get Callback in 5 Minutes</small>
-
+  <a href="tel:+918897978832" class="btn-yellow">
+  💰 Book Home Visit @  
+  <span class="price-tag">₹799</span>
+</a>
   <form>
     <input type="text" placeholder="Your Name" required>
     <input type="tel" placeholder="Phone Number" required>
@@ -2198,25 +2135,6 @@ button:hover {
     | 🏠 Home Visit Available
   </div>
 </section>
-<section class="cta-section">
-  <div class="container">
-
-    <div class="cta-box">
-
-      <h2>Need Physiotherapy at Home?</h2>
-
-      <p>Talk to a doctor now and book your session instantly.</p>
-
-      <div class="cta-buttons">
-        <a href="tel:+918897978832" class="btn btn-call">📞 Call Now</a>
-        <a href="https://wa.me/918897978832" class="btn-whatsapp">💬 WhatsApp Now</a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
 	  
 	  <div class="section-divider"></div>
 
