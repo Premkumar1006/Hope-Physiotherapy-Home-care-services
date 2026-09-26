@@ -8,6 +8,26 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18022897529');
+    // Google Ads website-call conversion
+  var googlePhoneCallback = function(formatted_number, mobile_number) {
+
+    document.querySelectorAll('.google-call-number').forEach(function(el) {
+      el.textContent = formatted_number;
+    });
+
+    document.querySelectorAll('.google-call-link').forEach(function(el) {
+      if (mobile_number) {
+        el.href = 'tel:' + mobile_number;
+      }
+    });
+
+  };
+
+  gtag('config', 'AW-18022897529/BI_4CJWei4YdEPmu_pFD', {
+    'phone_conversion_number': '+91 8897978832',
+    'phone_conversion_callback': googlePhoneCallback
+  });
+
   </script>
 </head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -166,31 +186,12 @@ body {
   margin-left: auto;
 }
 
-/* BRAND AREA */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-shrink:0;
+.logo {
+  width: 18px;
+  height: 28px;
+  object-fit: contain;
 }
 
-/* LOGO IMAGE */
-.brand img{
-  max-width:320px;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  display:block;
-}
-
-/* NAV */
-.nav{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  gap:28px;
-  white-space:nowrap;
-}
 .brand-text h1 {
   font-size: 28px;
   color: #0f172a;
@@ -1938,9 +1939,9 @@ button:hover {
   }
 
   .btn-yellow {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
+  font-size: 15px;
+  padding: 12px;
+}
 
   .price-inline {
     font-size: 16px;
@@ -2017,81 +2018,62 @@ button:hover {
   border-radius: 6px;
   font-size: 14px;
 }
-	  .form-urgency {
+.form-urgency {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
   color: #facc15; /* yellow highlight */
 }
-	  .highlight-area{
-  background:#16a34a;
-  color:#fff !important;
-  font-weight:700;
-  text-align:center;
-  border-radius:8px;
-}
-.highlight-area:hover{
-  background:#15803d;
-}
   </style>
 </head>
 
 	  <body>
-  <header class="main-header">
-  <div class="container header-wrap">
-
-    <!-- LOGO -->
-    <div class="brand">
-      <img src="Images\Logo Final 1.png" alt="Hope Physiotherapy">
-    </div>
-
-    <!-- NAV -->
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-
-      <div class="dropdown">
-        <a href="#services" class="drop-btn">Our Services ▾</a>
-        <div class="dropdown-content">
-          <a href="#services">Neurological Rehabilitation</a>
-          <a href="#services">Cardiac Rehabilitation</a>
-          <a href="#services">Post-Surgery Rehab</a>
-          <a href="#services">Elderly Care</a>
-          <a href="#services">Mobility Training</a>
+  <header>
+    <div class="main-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <img src="Images/Logo Final 1.png">
         </div>
-      </div>
 
-      <div class="dropdown">
-        <a href="#areas" class="drop-btn">Areas We Serve ▾</a>
-        <div class="dropdown-content">
-          <a href="#areas">📍 Gachibowli</a>
-          <a href="#areas">📍 Kondapur</a>
-          <a href="#areas">📍 Madhapur / Hitech City</a>
-          <a href="#areas">📍 Jubilee Hills</a>
-          <a href="#areas">📍 Banjara Hills</a>
-          <a href="#areas">📍 Begumpet</a>
-          <a href="#areas">📍 Kukatpally / Miyapur</a>
-          <a href="#areas">📍 Manikonda</a>
-          <a href="#areas">📍 Secunderabad</a>
-          <a href="#areas">📍 Himayatnagar / Ameerpet</a>
-          <a href="#areas">📍 Dilsukhnagar / LB Nagar</a>
-          <a href="#areas">📍 Uppal / Nagole</a>
-          <a href="#areas" class="highlight-area">✔ Serving All Hyderabad</a>
-        </div>
-      </div>
-    </nav>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <div class="dropdown">
+  <a href="#services" class="drop-btn">Our Services ▾</a>
 
-    <!-- RIGHT SIDE -->
-    <div class="header-call">
-      📞 <a href="tel:+918897978832">+91 8897978832</a>
-      <a href="#">🌐</a>
-      <a href="#">📘</a>
-      <a href="https://wa.me/918897978832">🟢💬</a>
-    </div>
+  <div class="dropdown-content">
+    <a href="#services">Neurological Rehabilitation</a>
+    <a href="#services">Cardiac Rehabilitation</a>
+    <a href="#services">Post-Surgery Rehab</a>
+    <a href="#services">Elderly Care</a>
+    <a href="#services">Mobility Training</a>
+  </div>
+</div>
+        <div class="dropdown">
+  <a href="#areas" class="drop-btn">Areas We Serve ▾</a>
 
+  <div class="dropdown-content">
+    <a href="#areas">📍 Jubilee Hills</a>
+    <a href="#areas">📍 Banjara Hills</a>
+    <a href="#areas">📍 Begumpet</a>
+    <a href="#areas">📍 Secunderabad</a>
+    <a href="#areas">📍 Gachibowli</a>
+    <a href="#areas">📍 Dilsukhnagar</a>
+    <a href="#areas">📍 Manikonda</a>
+    <a href="#areas">📍 Himayatnagar</a>
+  </div>
+	</div> 
+	<div class="header-call"> 📞 <a href="tel:+918897978832">+91 8897978832</a> 
+	<a href="#" target="_blank">🌐</a>   <!-- Google -->
+    <a href="#" target="_blank">📘</a>   <!-- Facebook -->
+	<a href="https://wa.me/918897978832" target="_blank">🟢💬</a></div>
+</div>
+</nav>
+ 	</div>
   </div>
 </header>
+
 	
 </div></div></div> 
 	
@@ -2110,7 +2092,7 @@ button:hover {
       </p>
 
 		<p class="trust-line">
-  <b>With Extensive Clinical Experience, Advanced Treatment Methods and a Patient-First Approach,
+  <b>With 14+ Years of Experience, Advanced Treatment Methods and a Patient-First Approach,
   We Deliver Personalized Physiotherapy Care at Your Home.</b>
 		</p>
 		
@@ -2131,15 +2113,17 @@ button:hover {
     <span class="icon">→</span>
   </a>
 
+
 </div>
-	</div>
+     
+</div>
 		
     <!-- RIGHT SIDE (FORM NOW CORRECT) -->
     <div class="hero-right">
 
       <div class="hero-form-box">
 
-  <a href="tel:+918897978832" class="btn-yellow">
+  <a href="tel:+918897978832" class="google-call-link btn-yellow">
   💰 Book Home Visit @  
   <span class="price-tag">₹799</span>
 </a>
@@ -2159,8 +2143,8 @@ button:hover {
         <a href="https://wa.me/918897978832?text=Hello Doctor, I need physiotherapy at home" class="btn-whatsapp">
           💬 WhatsApp Now – Quick Response
         </a>
-	<p class="form-urgency">
-  ⚡ Only Few Slots Left Today – Book Now
+<p class="form-urgency">
+  ⚡ Same Day Visit Available | Limited Slots Today
 </p>
       </div>
 
@@ -2170,7 +2154,8 @@ button:hover {
 
   </div>
 </section>
-		  
+	
+	  
 	  <div class="section-divider"></div>
 
   <div class="wave">
@@ -2227,7 +2212,7 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
     </p>
 
   </div>
-</section>
+</section>class="btn-call"
 <div class="section-divider"></div>
 
 <div class="wave">
@@ -2685,7 +2670,12 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
     <p class="section-subtitle">We provide home physiotherapy services across selected nearby areas.</p>
 
     <div class="area-tags">
-        <a href="#areas" class="highlight-area">✔ Serving All Hyderabad</a>
+      <div class="tag">📍 Jubilee Hills</div>
+      <div class="tag">📍 Banjara Hills</div>
+      <div class="tag">📍 Begumpet</div>
+      <div class="tag">📍 Secunderabad</div>
+      <div class="tag">📍 Gachibowli</div>
+      <div class="tag">📍 Dilsukhnagar</div>
     </div>
   </div>
 </section>
@@ -2817,7 +2807,7 @@ I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
 
       <div class="contact-item">
         <span>📞</span>
-        <a href="tel:+918897978832">+91 8897978832</a>
+        <a href="tel:+918897978832" class="google-call-link google-call-number">+91 8897978832</a>
       </div>
 
       <div class="contact-item">
