@@ -465,3 +465,204 @@ footer{
   .service-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
 }
+
+/* =========================================================
+   FINAL MOBILE FIX - HERO + BOOKING FORM
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* Mobile navigation */
+  .nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    min-width: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  .menu {
+    display: none !important;
+  }
+
+  .phone {
+    order: 3;
+    width: 100% !important;
+    margin-top: 8px;
+    padding: 11px 16px !important;
+    font-size: 16px !important;
+    text-align: center;
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  /* HERO becomes one vertical column */
+  .hero {
+    width: 100%;
+    padding: 20px 5% 30px !important;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    min-height: auto !important;
+    box-sizing: border-box;
+  }
+
+  /* Hero image */
+  .hero-visual {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    position: relative !important;
+    box-sizing: border-box;
+  }
+
+  .hero-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 360px !important;
+    object-fit: cover;
+    border-radius: 22px;
+    box-sizing: border-box;
+  }
+
+  /* Booking form moves BELOW the image */
+  .booking {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+
+    margin: -45px 12px 0 !important;
+
+    padding: 18px !important;
+
+    box-sizing: border-box;
+    z-index: 5;
+  }
+
+  .booking h2 {
+    font-size: 24px !important;
+  }
+
+  .form-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 9px !important;
+    box-sizing: border-box;
+  }
+
+  input,
+  select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .full {
+    grid-column: 1 / -1 !important;
+  }
+
+  .book-btn {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Prevent headings/content from creating horizontal overflow */
+  .hero h1 {
+    font-size: 40px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1.5px;
+    max-width: 100%;
+  }
+
+  .location-highlight {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 18px !important;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  /* Trust section */
+  .trust-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100%;
+  }
+
+  /* Buttons */
+  .ctas {
+    width: 100%;
+  }
+
+  .ctas .btn {
+    box-sizing: border-box;
+  }
+
+  /* Make #book scroll to a comfortable position */
+  #book {
+    scroll-margin-top: 15px;
+  }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media screen and (max-width: 500px) {
+
+  .hero h1 {
+    font-size: 38px !important;
+  }
+
+  .hero-photo {
+    height: 330px !important;
+  }
+
+  .booking {
+    width: calc(100% - 16px) !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .booking h2 {
+    font-size: 22px !important;
+  }
+
+  .booking small {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
