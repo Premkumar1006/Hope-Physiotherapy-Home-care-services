@@ -348,65 +348,117 @@ footer{
 }
 
 @media(max-width:800px){
-  .topbar{display:none}
 
-  .nav{padding:12px 5%}
-
-  .logo{min-width:0}
-
-  .logo-mark{
-    width:48px;height:48px;font-size:24px
+  /* Mobile top/header */
+  .topbar{
+    display:none;
   }
 
-  .logo-name{font-size:20px}
+  .nav{
+    padding:12px 5%;
+    flex-wrap:wrap;
+  }
 
-  .menu{display:none}
+  .logo{
+    min-width:0;
+    flex:1;
+  }
 
-  .hero-grid{grid-template-columns:1fr}
+  .logo-mark{
+    width:48px;
+    height:48px;
+    font-size:24px;
+  }
 
-  .hero{padding:20px 5% 25px}
+  .logo-name{
+    font-size:20px;
+  }
 
-  .hero-visual{min-height:390px}
+  .menu{
+    display:none;
+  }
 
-  .hero-photo{height:390px}
+  /* PHONE NUMBER - FULL WIDTH ON MOBILE */
+  .phone{
+    order:3;
+    width:100%;
+    margin-top:8px;
+    padding:11px 16px;
+    font-size:16px;
+    text-align:center;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+    box-sizing:border-box;
+  }
+
+  /* Hero */
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:20px 5% 25px;
+  }
+
+  .hero-visual{
+    min-height:390px;
+  }
+
+  .hero-photo{
+    height:390px;
+  }
 
   .booking{
     position:relative;
-    top:auto;right:auto;bottom:auto;
+    top:auto;
+    right:auto;
+    bottom:auto;
     margin:-55px 12px 0;
-    width:auto;z-index:3
+    width:auto;
+    z-index:3;
   }
 
-  .hero h1{font-size:46px}
+  .hero h1{
+    font-size:46px;
+  }
 
+  /* Trust items */
   .trust-row{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,1fr);
   }
 
+  /* Services */
   .service-grid{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .why-grid{grid-template-columns:1fr}
+  /* Why Hope */
+  .why-grid{
+    grid-template-columns:1fr;
+  }
 
   .benefits{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,1fr);
   }
 
+  /* Steps */
   .steps{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
+  /* Reviews */
   .review-grid{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
+  /* Final CTA */
   .cta-inner{
     flex-direction:column;
-    align-items:flex-start
+    align-items:flex-start;
   }
 }
-
 @media(max-width:500px){
   .hero h1{font-size:40px}
   .location-highlight{font-size:18px}
