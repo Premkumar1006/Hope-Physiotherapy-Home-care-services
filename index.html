@@ -1,1051 +1,2962 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18022897529"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18022897529');
+    // Google Ads website-call conversion
+  var googlePhoneCallback = function(formatted_number, mobile_number) {
 
-<title>Hope Physiotherapy | Home Physiotherapy in Hyderabad</title>
+    document.querySelectorAll('.google-call-number').forEach(function(el) {
+      el.textContent = formatted_number;
+    });
 
-<meta name="description" content="Hope Physiotherapy provides personalized home physiotherapy and rehabilitation services across Hyderabad.">
+    document.querySelectorAll('.google-call-link').forEach(function(el) {
+      if (mobile_number) {
+        el.href = 'tel:' + mobile_number;
+      }
+    });
 
-<link rel="stylesheet" href="style.css">
+  };
 
-<!-- Google Ads conversion tracking -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18022897529"></script>
+  gtag('config', 'AW-18022897529/BI_4CJWei4YdEPmu_pFD', {
+    'phone_conversion_number': '+91 8897978832',
+    'phone_conversion_callback': googlePhoneCallback
+  });
 
-<script>
-window.dataLayer = window.dataLayer || [];
+  </script>
+</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hope Physiotherapy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #eaf8ff;
+      color: #334155;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    .top-bar {
+      background: #e0f2fe;
+      border-bottom: 1px solid #dbeafe;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    .top-bar .container,
+    .header .container,
+    .hero,
+    .about,
+    .contact,
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.call-btn-advanced {
+  background: linear-gradient(135deg, #ff0000, #dc2626);
+  color: #fff;
+  padding: 16px 26px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 17px;
+  text-decoration: none;
+  display: inline-block;
 
-function gtag(){
-  dataLayer.push(arguments);
+  box-shadow: 0 10px 25px rgba(220,38,38,0.6);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: pulseCall 1.5s infinite;
+  transition: all 0.3s ease;
 }
 
-gtag('js', new Date());
+/* HOVER */
+.call-btn-advanced:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(220,38,38,0.9);
+}
 
-gtag('config', 'AW-18022897529');
+/* SHINE EFFECT */
+.call-btn-advanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
 
-var googlePhoneCallback = function(formatted_number, mobile_number) {
+.call-btn-advanced:hover::before {
+  left: 120%;
+}
 
-  document.querySelectorAll('.google-call-number').forEach(function(el) {
-    el.textContent = formatted_number;
-  });
+/* PULSE ANIMATION */
+@keyframes pulseCall {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
 
-  document.querySelectorAll('.google-call-link').forEach(function(el) {
-    if (mobile_number) {
-      el.href = 'tel:' + mobile_number;
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top-bar {
+  background: #0f2d46;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header {
+  position: relative;
+}
+
+.main-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #0284c7, #06b6d4);
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-call {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap; /* prevents breaking */
+}
+
+.header-call a {
+  color: #16a34a;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 800;
+}
+.container {
+  padding-left: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* PUSH NAV TO RIGHT */
+.nav {
+  margin-left: auto;
+}
+
+.logo {
+  width: 18px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.brand-text h1 {
+  font-size: 28px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.brand-text p {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #0284c7;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+/* BUTTON */
+.drop-btn {
+  cursor: pointer;
+}
+
+/* HIDE DROPDOWN */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* ITEMS */
+.dropdown-content a {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #334155;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: #f1f5f9;
+  color: #0284c7;
+}
+
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* SLIDE EFFECT */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #06b6d4, #14b8a6);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+/* HOVER */
+.btn-primary:hover::before {
+  left: 0;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+.whatsapp-btn {
+  width: 42px;
+  height: 42px;
+  background: #06b6d4;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.whatsapp-btn:hover {
+  background: #0284c7;
+}
+
+@media (max-width: 992px) {
+  .header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .brand-text h1 {
+    font-size: 22px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    padding: 10px 18px;
+  }
+}
+  .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.popup-box button {
+  width: 100%;
+  padding: 12px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* HERO SECTION */
+.hero-banner {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+              url("Images/Physical_Medicine_and_Rehabilitation_18b5a5af9d.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+/* LAYOUT */
+.hero-banner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.hero-left h1 span {
+  color: #22c55e;
+}
+
+.hero-left p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.95);
+}
+  .tagline {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffd60a, #ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+}
+/* Glow Animation */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* PRIMARY + SECONDARY SAME STYLE */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: #6fa89a;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ICON (FIXED SELECTOR) */
+.btn-primary .icon,
+.btn-secondary .icon {
+  background: #1f4d43;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #5c9486;
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover .icon,
+.btn-secondary:hover .icon {
+  transform: translateX(5px);
+  background: #163d35;
+}
+  .trust-line {
+  font-size: 16px;
+  color: #ddd;   /* use #333 if white background */
+  margin-top: 12px;
+  line-height: 1.5;
+}  
+	  
+/* URGENCY TEXT */
+.urgency {
+  color: #facc15;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+/* ================= PRICE SECTION ================= */
+.pricing-section {
+  margin-top: 20px;
+}
+
+.price-text {
+  margin-top: 12px;
+}
+
+/* BIG PRICE (if used separately) */
+.amount {
+  font-size: 52px;
+  font-weight: 900;
+  color: #ffd60a;
+}
+
+.duration {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* ================= BUTTON ================= */
+.btn-yellow {
+  display: inline-block;
+  background: #ffd60a;
+  color: #000;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* ================= CTA ROW (BUTTON + PRICE) ================= */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: nowrap; /* keep in same line */
+}
+
+/* PRICE BESIDE BUTTON */
+.price-inline {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd60a;
+  white-space: nowrap; /* prevent line break */
+}
+
+.price-inline span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* ================= SAME DAY TEXT ================= */
+.same-day {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 600px) {
+
+  .cta-row {
+    flex-direction: row;       /* keep side-by-side */
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-yellow {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .price-inline {
+    font-size: 16px;
+  }
+
+}	
+	  /* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* WHATSAPP BUTTON */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37,211,102,0.8);
+}
+
+/* CALL BUTTON */
+.btn-call {
+  background: #ffffff;
+  color: #0284c7;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-call:hover {
+  transform: translateY(-3px);
+}
+
+/* FORM */
+.hero-form-box {
+  flex: 0 0 460px;
+  max-width: 460px;
+  margin-left: auto;
+
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* FORM TEXT */
+.hero-form-box h3 {
+  color: #dc2626;
+  margin-bottom: 6px;
+}
+
+.hero-form-box small {
+  color: #0284c7;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* INPUT */
+.hero-form-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+/* BUTTON */
+.form-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+/* TRUST BADGES */
+.trust-inline {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.trust-box {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+	  @media (max-width: 768px) {
+
+  .hero-banner-wrap {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .trust-inline {
+    justify-content: center;
+  }
+
+  /* FORM FIX */
+  .hero-form-box {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+/* WHATSAPP BUTTON - HIGH CONVERSION STYLE */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #25D366; /* solid WhatsApp green */
+  color: #ffffff;
+
+  padding: 14px 24px;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* ICON */
+.btn-whatsapp i {
+  font-size: 18px;
+}
+
+/* HOVER EFFECT */
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.8);
+}
+
+/* SHINE EFFECT */
+.btn-whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-whatsapp:hover::before {
+  left: 120%;
+	
+}/* TRUST */
+.trust-inline {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* BASE STYLE */
+.trust-box {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: 0.3s ease;
+}
+.trust-box {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  animation: glow 4s infinite;
+}
+
+.trust-box:nth-child(2){ animation-delay:1s;}
+.trust-box:nth-child(3){ animation-delay:2s;}
+
+@keyframes glow {
+  0% { box-shadow: none; }
+  50% { box-shadow: 0 0 15px rgba(255,255,255,0.6); }
+  100% { box-shadow: none; }
+}
+/* GLOW ANIMATION */
+.trust-box {
+  animation: glowFade 6s infinite;
+}
+
+/* Delay for each box */
+.trust-box:nth-child(1) {
+  animation-delay: 0s;
+}
+.trust-box:nth-child(2) {
+  animation-delay: 2s;
+}
+.trust-box:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* KEYFRAMES */
+@keyframes glowFade {
+  0% {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1);
+    box-shadow: none;
+  }
+  20% {
+    background: #25D366;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37,211,102,0.7);
+  }
+  40% {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1);
+    box-shadow: none;
+  }
+  100% {
+    background: rgba(255,255,255,0.15);
+  }
+}
+/* FORM BOX */
+.hero-form-box {
+  flex: 0 0 360px;              /* fixed width */
+  max-width: 360px;
+
+  margin-left: auto;            /* push to right */
+
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+  transform: translateY(-10px); /* slight lift */
+}
+
+/* TITLE */
+.hero-form-box h3 {
+  color: #dc2626;
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+
+/* SUB TEXT */
+.hero-form-box small {
+  color: #0284c7;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+.hero-form-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+/* INPUT FOCUS */
+.hero-form-box input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2,132,199,0.15);
+  outline: none;
+}
+
+/* BUTTON */
+.form-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.form-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+}	
+	  .section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #06b6d4, transparent);
+  margin: 20px 0;
+}
+
+.form-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #06b6d4, #0284c7);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.18);
+  color:#dff4ff;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(6px);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+@media (max-width: 991px) {
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .hero-left p {
+    font-size: 18px;
+  }
+
+  .hero-form-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+    .info-strip, .services-grid, .why-grid, .testimonials, .area-tags {
+      display: grid;
+      gap: 20px;
     }
-  });
+    .info-strip {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin: 10px 0 50px;
+    }
+    .card, .service-card, .testimonial-card, .form-box, .about-image, .step-box {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #d7eefb;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(2, 132, 199, 0.07);
+    }
+    .card { text-align: center; font-weight: bold; }
+    section { padding: 60px 0; }
+    .section-light { background: #f2fbff; }
+    .section-title {
+      font-size: 34px;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      color: #475569;
+      margin-bottom: 30px;
+    }
 
-};
+    .about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-gtag('config', 'AW-18022897529/BI_4CJWei4YdEPmu_pFD', {
-  'phone_conversion_number': '+91 8897978832',
-  'phone_conversion_callback': googlePhoneCallback
-});
-</script>
+.about-image,
+.about-text {
+  flex: 1 1 450px;
+}
 
+.about .about-image {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: auto;
+  overflow: hidden;
+}
+.highlight-text {
+  color: #0284c7;
+  font-weight: 700;
+}
+.about-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  border: 1px solid #cdefff;
+  box-shadow: 0 18px 40px rgba(2, 132, 199, 0.12);
+}
+
+.conditions-list {
+  margin: 10px 0 18px 22px;
+  line-height: 1.8;
+}
+.about-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-text .section-title {
+  margin-bottom: 14px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+.about-text .section-subtitle {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.service-item h3 {
+  margin-bottom: 10px;
+  color: #0284c7;
+}
+
+.service-item p {
+  text-align: justify;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #06b6d4, transparent);
+  margin: 20px 0;
+}
+
+/* SECTION */
+.condition-section {
+  margin: 60px 0;
+}
+
+/* ROW */
+.condition-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* REVERSE */
+.condition-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.condition-image img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* TEXT */
+.condition-text h2 {
+  color: #0284c7;
+  margin-bottom: 10px;
+}
+
+.condition-text p {
+  line-height: 1.7;
+}
+
+/* BUTTON */
+.service-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* READ MORE */
+.full-text {
+  display: none;
+}
+
+.full-text.open {
+  display: block;
+}/* ===== READ MORE ===== */
+.full-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.full-text.open {
+  max-height: 500px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 18px;
+  background-color: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1e293b;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .condition-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .condition-row.reverse {
+    flex-direction: column;
+  }
+
+  .condition-image img {
+    width: 100%;
+  }
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #06b6d4, transparent);
+  margin: 20px 0;
+}
+
+/* ===== ADVANCED SECTION ===== */
+.advanced-section {
+  padding: 80px 0;
+}
+
+/* WHY CARDS */
+.why-card {
+  background: #fff7ed;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.why-card span {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.why-card h4 {
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+  border-left: 3px solid #0284c7;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #06b6d4, #0284c7);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+.step-content {
+  margin-left: 30px;
+}
+
+.step-content h4 {
+  margin-bottom: 5px;
+  color: #0f172a;
+}
+
+.step-content p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+    .service-card h3 { margin-bottom: 10px; color: #0f172a; }
+    .service-card::before {
+      content: "✦";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 14px;
+      border-radius: 14px;
+      background: #dff4ff;
+      color: #0284c7;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .why-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 20px;
+    }
+    .step-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .area-tags {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      margin-top: 24px;
+    }
+    .tag {
+      padding: 12px 16px;
+      background: #dff4ff;
+      border: 1px solid #bfe8fb;
+      border-radius: 999px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+/* ===== AREAS SECTION ===== */
+#areas {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Map background */
+.map-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: hue-rotate(90deg) saturate(120%) brightness(65%);
+}
+
+/* Content above map */
+#areas .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: black;
+  padding-top: 60px;
+}
+/* TESTIMONIAL SECTION */
+/* ===== TESTIMONIAL SECTION ===== */
+.testimonial-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  overflow: hidden;
+}
+
+/* SLIDER */
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+
+/* TRACK */
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+/* CARD */
+.testimonial-card {
+  min-width: 300px;
+  max-width: 320px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+/* GOOGLE STYLE HEADER */
+.google-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.g-icon {
+  width: 28px;
+  height: 28px;
+  background: #4285F4;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.testimonial-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* STARS */
+.stars {
+  color: #facc15;
+  margin-bottom: 8px;
+}
+
+/* AUTO SCROLL */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* PAUSE ON HOVER */
+.testimonial-slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .testimonial-card {
+    min-width: 260px;
+  }
+}    /* CTA SECTION */
+.cta-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW EFFECT */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  bottom: -120px;
+  right: -120px;
+  filter: blur(100px);
+}
+
+/* BOX */
+.cta-box {
+  text-align: center;
+  color: #ffffff;
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT */
+.cta-box h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.cta-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* BUTTON GROUP */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BUTTON BASE */
+.cta-buttons .btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* CALL BUTTON */
+.btn-call {
+  background: #ffffff;
+  color: #0284c7;
+}
+
+.btn-call:hover {
+  transform: translateY(-3px);
+}
+
+.whatsapp-advanced-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25D366; /* solid color instead of gradient */
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  /* 🔥 ADD THIS */
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+
+  position: relative;
+  transition: all 0.3s ease;
+}
+	  .whatsapp-advanced-btn .text {
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+	  .whatsapp-advanced-btn {
+  backdrop-filter: blur(6px);
+}
+/* BOOK BUTTON */
+.btn-book {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-book:hover {
+  background: #ffffff;
+  color: #0284c7;
+  transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .cta-box h2 {
+    font-size: 28px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+  }
+}
+   /* CONTACT SECTION */
+.contact-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  flex: 1 1 400px;
+}
+
+.contact-info h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.contact-sub {
+  margin-bottom: 25px;
+  color: #475569;
+}
+
+/* CONTACT ITEMS */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.contact-item span {
+  font-size: 20px;
+}
+
+.contact-item a {
+  color: #0284c7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE FORM */
+.contact-form-box {
+  flex: 1 1 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.15);
+}
+
+.contact-form-box h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+/* FORM */
+.contact-form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea,
+.contact-form-box select {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus,
+.contact-form-box select:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* BUTTON */
+.btn-submit {
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.3);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+    /* FOOTER */
+.footer {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #cbd5e1;
+  padding-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+/* HEADINGS */
+.footer-col h3,
+.footer-col h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer-col a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #38bdf8;
+  transform: translateX(4px);
+}
+
+/* SOCIAL ICONS */
+.footer-socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #1e293b;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #0284c7;
+  color: white;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  padding: 18px 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+    @media (max-width: 768px) {
+      .hero-text h2, .cta h2, .section-title { font-size: 30px; }
+      .two-col { grid-template-columns: 1fr; }
+      .nav { gap: 14px; }
+    }
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #14b8a6, #06b6d4, #14b8a6);
+  background-size: 200% auto;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+
+  animation: shine 2s linear infinite, glow 1.2s ease-in-out infinite !important;
+}
+@media (max-width: 600px) {
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(6,182,212,0.4); }
+  50% { box-shadow: 0 0 25px rgba(6,182,212,1); }
+}
+/* ===== ADVANCED CTA BUTTONS ===== */
+.advanced-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.badge-container {
+    margin-top: 15px;
+}
+
+.badge {
+  display: inline-block;
+  background: #16a34a;   /* green */
+  color: #ffffff;        /* white text */
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #16a34a;  /* for hover outline */
+  transition: all 0.3s ease;
+}
+
+/* HOVER → WHITE */
+.badge:hover {
+  background: #ffffff;   /* white */
+  color: #16a34a;        /* green text */
+  transform: translateY(-2px);
+}
+	  /* Base Button */
+.cta-btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Shine Effect */
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+  .cta-btn:hover::before {
+  left: 125%;
+}
+ .hero-call-float {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+
+  background: #22c55e; /* clean medical green */
+  color: #fff;
+
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Hover Lift */
+.cta-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* ===== INDIVIDUAL BUTTON STYLES ===== */
+
+/* Primary */
+.primary-btn {
+  background: linear-gradient(135deg, #06b6d4, #0284c7);
+  box-shadow: 0 10px 25px rgba(2,132,199,0.4);
+}
+
+/* Call */
+.call-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+}
+	@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+  100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
+}
+/* Mobile */
+@media (max-width: 600px) {
+
+  .advanced-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-yellow {
+  font-size: 15px;
+  padding: 12px;
+}
+
+  .price-inline {
+    font-size: 16px;
+    white-space: nowrap; /* keep ₹799 in one line */
+  }
+
+ .cta-row {
+  flex-direction: row;     /* 🔥 keep side-by-side */
+  align-items: center;
+  flex-wrap: nowrap;
+}
+  .cta-btn {
+    text-align: center;
+    width: 100%;
+  }
+
+}/* ===== FORM JUMP EFFECT ===== */
+.hero-form-box {
+  transition: transform 0.3s ease;
+}
+
+/* Trigger animation on hover */
+
+/* Keyframes for jump */
+@keyframes jumpOnce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-15px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+  .btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.form-price {
+  background: #ffd60a;
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.btn-yellow {
+  display: block;              /* 👈 full width inside form */
+  width: 100%;
+  background: #ffd60a;
+  color: #000;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 214, 10, 0.4);
+
+  margin-bottom: 20px;         /* 👈 GAP FIX */
+}
+
+/* HOVER */
+.btn-yellow:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+}
+  .price-tag {
+  margin-left: 6px;
+  background: #000;
+  color: #ffd60a;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.form-urgency {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #facc15; /* yellow highlight */
+}
+  </style>
 </head>
 
-<body>
+	  <body>
+  <header>
+    <div class="main-header">
+    <div class="container header-wrap">
+      <div class="brand">
+        <img src="Images/Logo Final 1.png">
+        </div>
 
-<div class="topbar">
-  <span>🏠 Home Physiotherapy Services in Hyderabad</span>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <div class="dropdown">
+  <a href="#services" class="drop-btn">Our Services ▾</a>
 
-  <span>
-    📅 Appointment Based Service &nbsp; | &nbsp;
-    🏠 Home Visit Across Hyderabad &nbsp; | &nbsp;
-    ♥ Your Health, Our Priority
-  </span>
-</div>
-
-
-<header class="header">
-
-<nav class="nav">
-
-<a class="logo" href="#home">
-
-  <div class="logo-mark">H</div>
-
-  <div>
-    <div class="logo-name">
-      Hope <span>Physiotherapy</span>
-    </div>
-
-    <div class="logo-sub">
-      Physiotherapy at Your Home
-    </div>
+  <div class="dropdown-content">
+    <a href="#services">Neurological Rehabilitation</a>
+    <a href="#services">Cardiac Rehabilitation</a>
+    <a href="#services">Post-Surgery Rehab</a>
+    <a href="#services">Elderly Care</a>
+    <a href="#services">Mobility Training</a>
   </div>
-
-</a>
-
-
-<div class="location-pill">
-  📍 Home Physiotherapy – Hyderabad
 </div>
+        <div class="dropdown">
+  <a href="#areas" class="drop-btn">Areas We Serve ▾</a>
 
-
-<div class="menu">
-
-<a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#services">Our Services</a>
-<a href="#why">Why Hope</a>
-<a href="#reviews">Patient Reviews</a>
-<a href="#areas">Areas We Serve</a>
-<a href="#faq">FAQ</a>
-
+  <div class="dropdown-content">
+    <a href="#areas">📍 Jubilee Hills</a>
+    <a href="#areas">📍 Banjara Hills</a>
+    <a href="#areas">📍 Begumpet</a>
+    <a href="#areas">📍 Secunderabad</a>
+    <a href="#areas">📍 Gachibowli</a>
+    <a href="#areas">📍 Dilsukhnagar</a>
+    <a href="#areas">📍 Manikonda</a>
+    <a href="#areas">📍 Himayatnagar</a>
+  </div>
+	</div> 
+	<div class="header-call"> 📞 <a href="tel:+918897978832">+91 8897978832</a> 
+	<a href="#" target="_blank">🌐</a>   <!-- Google -->
+    <a href="#" target="_blank">📘</a>   <!-- Facebook -->
+	<a href="https://wa.me/918897978832" target="_blank">🟢💬</a></div>
 </div>
-
-
-<a
-class="phone google-call-link"
-href="tel:+918897978832">
-
-📞 <span class="google-call-number">
-+91 88979 78832
-</span>
-
-</a>
-
 </nav>
-
+ 	</div>
+  </div>
 </header>
 
+	
+</div></div></div> 
+	
+	<section class="hero-banner">
+  <div class="container hero-banner-wrap">
 
-<main id="home">
+    <!-- LEFT SIDE -->
+    <div class="hero-left">
 
+      <h1 style="font-size:48px;">
+        Home Physiotherapy in Hyderabad
+      </h1>
 
-<!-- HERO -->
+      <p class="tagline">
+        Feel Better • Move Freely • Live Fully
+      </p>
 
-<section class="hero">
+		<p class="trust-line">
+  <b><i>With 14+ Years of Experience, Advanced Treatment Methods and a Patient-First Approach,
+  We Deliver Personalized Physiotherapy Care at Your Home.</i></b>
+		</p>
+		
+      <div class="badge-container">
+        <span class="badge">✔ 14+ Years Experience</span>
+        <span class="badge">✔ 1000+ Patients Treated</span>
+        <span class="badge">⭐ 5 Star Rated</span>
+      </div>
 
-<div class="hero-grid">
-
-
-<div>
-
-<div class="kicker">
-Professional • Personalized • At Your Home
+     
 </div>
+		
+    <!-- RIGHT SIDE (FORM NOW CORRECT) -->
+    <div class="hero-right">
 
+      <div class="hero-form-box">
 
-<h1>
-Expert Physiotherapy
-<br>
-<span>Care at Your Home</span>
-</h1>
-
-
-<div class="location-highlight">
-📍 Home Physiotherapy – Hyderabad
-</div>
-
-
-<p>
-Personalized treatment for pain relief, faster recovery and better mobility —
-delivered in the comfort of your home.
-</p>
-
-
-<div class="trust-row">
-
-<div class="trust">
-<div class="trust-icon">🏅</div>
-14+ Years<br>
-Experience
-</div>
-
-<div class="trust">
-<div class="trust-icon">👥</div>
-1000+<br>
-Patients Treated
-</div>
-
-<div class="trust">
-<div class="trust-icon">🏠</div>
-Home Visit<br>
-Service
-</div>
-
-<div class="trust">
-<div class="trust-icon">📋</div>
-Personalized<br>
-Treatment Plans
-</div>
-
-</div>
-
-
-<div class="ctas">
-
-<a
-class="btn btn-green"
-href="tel:+918897978832">
-
-📞 Call Now
-
+  <a href="tel:+918897978832" class="google-call-link btn-yellow">
+  💰 Book Home Visit @  
+  <span class="price-tag">₹799</span>
 </a>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
 
+    <button class="form-btn">
+      📞 Get Call Back Now
+    </button>
+  </form>
+<div class="hero-buttons">
+        <a href="tel:+918897978832" class="call-btn-advanced">
+          📞 Call Now – Instant Booking
+        </a>
 
-<a
-class="whatsapp"
-href="https://wa.me/918897978832"
-target="_blank"
-aria-label="WhatsApp"
->
-◉
+        <a href="https://wa.me/918897978832?text=Hello Doctor, I need physiotherapy at home" class="btn-whatsapp">
+          💬 WhatsApp Now – Quick Response
+        </a>
+<p class="form-urgency">
+  ⚡ Same Day Visit Available | Limited Slots Today
+</p>
+      </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+	
+	  
+	  <div class="section-divider"></div>
+
+  <div class="wave">
+  <svg viewBox="0 0 1440 120">
+    <path fill="#0284c7" d="M0,0L1440,80L1440,0Z"></path>
+  </svg>
+</div>
+
+  <section class="section-light" id="about">
+  <div class="container about">
+    <div class="about-image">
+      <img src="Images/Self_Image-removebg-preview (1).png" alt="Physiotherapist supporting patient at home" />
+    </div>
+    <div class="about-text">
+      <h1 class="about-heading"><u>About Us</u></h1>
+      <p class="section-subtitle">
+<p><b>At Hope Physiotherapy</b>, we are committed to providing professional, compassionate, and personalized physiotherapy care in the comfort of your home.
+I am <span class="highlight-text">Dr. M. Premkumar, M.P.T (Neuro)</span>, with
+  <span class="highlight-text">14 years of experience</span> in the field of physiotherapy, dedicated to helping patients recover from pain, injury, neurological conditions, mobility problems, and post-surgical difficulties.</p>
+
+<p><b>Our goal</b> is to support every patient with safe, convenient, and effective home-based physiotherapy services tailored to individual needs. We focus on improving pain relief, movement, strength, balance, gait, and overall functional recovery so patients can regain confidence and independence in daily life.</p>
+
+<p><b>We provide physiotherapy care for a wide range of conditions, including:</b></p>
+
+<ul class="conditions-list">
+  <span class="highlight-text"><li>Neurological rehabilitation</li>
+  <li>Stroke rehabilitation</li>
+  <li>Post-surgery recovery</li>
+  <li>Back pain and neck pain</li>
+  <li>Joint pain and arthritis care</li>
+  <li>Elderly care physiotherapy</li>
+  <li>Gait and balance training</li>
+  <li>Mobility improvement and functional exercises</li></span>
+</ul>
+
+<p>
+  At Hope Physiotherapy, we believe that recovery is not just about treatment — it is about restoring comfort, confidence, and quality of life with expert care at your doorstep.
+</p>
+      <a href="#contact" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px; background:#fff;">
+  <div class="container" style="text-align:center;">
+
+    <h2>Why Patients Choose Us</h2>
+
+    <p style="margin-top:10px;">
+      ✔ 14+ Years Experience  
+      ✔ Personalized Home Treatment  
+      ✔ Fast Recovery Plans  
+      ✔ Trusted by 1000+ Patients  
+    </p>
+
+  </div>
+</section>class="btn-call"
+<div class="section-divider"></div>
+
+<div class="wave">
+  <svg viewBox="0 0 1440 120">
+    <path fill="#0284c7" d="M0,0L1440,80L1440,0Z"></path>
+  </svg>
+</div>
+
+<section id="services">
+  <div class="container">
+
+    <h2 class="section-title" style="text-align:center;">
+      <img src="Images/Home image.jpg" style="width:40px; vertical-align:middle; margin-right:10px;">
+      Home Physiotherapy Services
+    </h2>
+
+    <p class="section-subtitle" style="text-align:center;">
+      <b><i>(In the comfort of your home)</i></b>
+    </p>
+
+    <div class="services-list">
+
+      <!-- 1 -->
+      <div class="condition-section">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/neuro rehabilitation.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Neurological Rehabilitation</h2>
+            <div style="margin-top:10px;">
+
+  <div style="margin-top:10px;">
+
+  <div style="max-width:500px;">
+
+  <!-- BULLETS -->
+  <div style="margin-top:10px;">
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Stroke recovery & neurological rehabilitation</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Improves balance, walking & coordination</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Personalized therapy at home</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Faster recovery with expert guidance</span>
+    </p>
+
+  </div>
+
+  <!-- BEST FOR -->
+  <p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+    Best for:
+  </p>
+
+  <p style="margin-top:4px;">
+    Spinal cord injuries, peripheral nerve injuries, Parkinson’s, GBS
+  </p>
+
+  <!-- GREEN LINE -->
+  <p style="margin-top:8px; font-weight:bold; color:#22c55e;">
+    ✔ Home visit available | Same-day booking
+  </p>
+
+</div></div>
+</div>
+<p style="color:#facc15; font-weight:bold; margin-top:10px;">
+⚡ Regain movement and independence with expert neuro rehabilitation
+</p>
+            <button onclick="toggleText(this)">Read More</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="condition-section">
+        <div class="condition-row reverse">
+
+          <div class="condition-image">
+            <img src="Images/Neurological conditions image.png">
+          </div>
+
+          <div class="condition-text">
+            <h2>Stroke Rehabilitation</h2>
+            <div style="margin-top:10px;">
+			<div style="max-width:500px;">
+
+  <!-- BULLETS -->
+  <div style="margin-top:10px;">
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Improves walking, balance & daily movement</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Helps regain strength after stroke</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Personalized therapy at home</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Supports faster recovery & independence</span>
+    </p>
+
+  </div>
+
+  <!-- BEST FOR -->
+  <p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+    Best for:
+  </p>
+
+  <p style="margin-top:4px;">
+    Stroke patients with weakness, paralysis, or balance issues
+  </p>
+
+  <!-- GREEN LINE -->
+  <p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+    ✔ Home visit available | Same-day booking
+  </p>
+
+  <!-- YELLOW LINE -->
+  <p style="color:#facc15; font-weight:bold; margin-top:10px;">
+    ⚡ Early therapy improves walking, strength and independence after stroke
+  </p>
+
+  <button onclick="toggleText(this)">Read More</button>
+
+</div>    
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="condition-section" style="margin-bottom:50px;">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/Orthopedic rehabilitation.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Post-Surgery Rehabilitation</h2>
+            <div style="max-width:500px;">
+
+  <!-- BULLETS -->
+  <div style="margin-top:10px;">
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Faster recovery after surgery</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Improves joint movement & flexibility</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Reduces stiffness and mobility issues</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Personalized rehab at home for safe healing</span>
+    </p>
+
+  </div>
+
+  <!-- BEST FOR -->
+  <p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+    Best for:
+  </p>
+
+  <p style="margin-top:4px;">
+    Knee replacement, hip surgery, ligament repair, spine surgery
+  </p>
+
+  <!-- GREEN LINE -->
+  <p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+    ✔ Home visit available | Same-day booking
+  </p>
+
+  <!-- 🔥 YELLOW LINE (NOW PROPER POSITION) -->
+  <p style="color:#facc15; font-weight:bold; margin-top:10px;">
+    ⚡ Early rehabilitation ensures faster and safer recovery
+  </p>
+
+  <button onclick="toggleText(this)">Read More</button>
+
+</div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="condition-section" style="margin-bottom:50px;">
+        <div class="condition-row reverse">
+
+          <div class="condition-image">
+            <img src="Images/Cardiac rehabilitation.png">
+          </div>
+
+          <div class="condition-text">
+            <h2>Cardiac Rehabilitation</h2>
+            <div style="max-width:500px;">
+
+  <!-- BULLETS -->
+  <div style="margin-top:10px;">
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Safe and monitored exercises for recovery</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Improves stamina, breathing & daily activity</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Reduces risk of future heart complications</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Personalized rehab plan at home with expert care</span>
+    </p>
+
+  </div>
+
+  <!-- BEST FOR -->
+  <p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+    Best for:
+  </p>
+
+  <p style="margin-top:4px;">
+    Heart surgery recovery, cardiac patients, low endurance, post-hospital rehab
+  </p>
+
+  <!-- GREEN LINE -->
+  <p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+    ✔ Home visit available | Same-day booking
+  </p>
+
+  <!-- YELLOW LINE -->
+  <p style="color:#facc15; font-weight:bold; margin-top:10px;">
+    ⚡ Safe physiotherapy improves heart strength and recovery
+  </p>
+
+  <button onclick="toggleText(this)">Read More</button>
+
+</div>
+</div>
+</div>
+
+      <!-- 5 -->
+      <div class="condition-section" style="margin-bottom:50px;">
+        <div class="condition-row">
+
+          <div class="condition-image">
+            <img src="Images/Physiotherapy-for-The-Elderly.jpg">
+          </div>
+
+          <div class="condition-text">
+            <h2>Elderly Care Physiotherapy</h2>
+            <div style="max-width:500px;">
+
+  <!-- BULLETS -->
+  <div style="margin-top:10px;">
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Improves walking, balance & independence</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Reduces risk of falls and injuries</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Gentle, safe exercises for elderly patients</span>
+    </p>
+
+    <p style="display:flex; align-items:flex-start; gap:8px;">
+      <span style="color:#22c55e; font-size:18px;">✔</span>
+      <span>Personalized care at home for comfort and safety</span>
+    </p>
+
+  </div>
+
+  <!-- BEST FOR -->
+  <p style="margin-top:10px; font-weight:bold; color:#0284c7;">
+    Best for:
+  </p>
+
+  <p style="margin-top:4px;">
+    Elderly patients with weakness, balance issues, joint pain or mobility problems
+  </p>
+
+  <!-- GREEN LINE -->
+  <p style="color:#22c55e; font-weight:bold; margin-top:8px;">
+    ✔ Home visit available | Same-day booking
+  </p>
+
+  <!-- YELLOW LINE -->
+  <p style="color:#facc15; font-weight:bold; margin-top:10px;">
+    ⚡ Helping seniors stay active, independent and safe at home
+  </p>
+
+<button onclick="toggleText(this)">Read More</button>
+
+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="wave">
+  <svg viewBox="0 0 1440 120">
+    <path fill="#0284c7" d="M0,0L1440,80L1440,0Z"></path>
+  </svg>
+</div>
+
+<div class="section-divider"></div>
+
+<section class="section-light advanced-section">
+  <div class="container two-col">
+
+    <!-- WHY CHOOSE -->
+    <div>
+      <h2 class="section-title">Why Choose Hope Physiotherapy?</h2>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <span>🏠</span>
+          <h4>Home Visit Convenience</h4>
+          <p>Expert physiotherapy care delivered at your doorstep for comfort and ease.</p>
+        </div>
+
+        <div class="why-card">
+          <span>🧑‍⚕️</span>
+          <h4>Personalized Care Plans</h4>
+          <p>Customized treatment plans tailored to your specific condition and recovery goals.</p>
+        </div>
+
+        <div class="why-card">
+          <span>💙</span>
+          <h4>Patient-Friendly Approach</h4>
+          <p>Compassionate and supportive care focused on your comfort and well-being.</p>
+        </div>
+
+        <div class="why-card">
+          <span>🛡️</span>
+          <h4>Safe Recovery Support</h4>
+          <p>Guided rehabilitation ensuring safe, effective, and long-term recovery.</p>
+        </div>
+
+        <div class="why-card">
+          <span>👵</span>
+          <h4>Elderly Care Focus</h4>
+          <p>Specialized care for seniors to improve mobility, balance, and independence.</p>
+        </div>
+
+        <div class="why-card">
+          <span>📊</span>
+          <h4>Professional Guidance</h4>
+          <p>14+ years of experience ensuring expert assessment and treatment.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div>
+      <h2 class="section-title">How Our Home Visit Service Works</h2>
+
+      <div class="timeline">
+
+        <div class="step">
+          <div class="circle">1</div>
+          <div class="step-content">
+            <h4>Contact Us</h4>
+            <p>Reach out via call or WhatsApp to discuss your condition.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="circle">2</div>
+          <div class="step-content">
+            <h4>Book Assessment</h4>
+            <p>Schedule a home visit at your convenient time.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="circle">3</div>
+          <div class="step-content">
+            <h4>Personalized Plan</h4>
+            <p>Get a tailored physiotherapy plan based on your needs.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="circle">4</div>
+          <div class="step-content">
+            <h4>Start Recovery</h4>
+            <p>Begin treatment and improve mobility from home.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+  <section id="areas">
+  <iframe
+    src="https://www.google.com/maps?q=Hyderabad&output=embed"
+    class="map-bg">
+  </iframe>
+
+  <div class="container content">
+    <h3 class="section-title">Service Locations We Cover</h3>
+    <p class="section-subtitle">We provide home physiotherapy services across selected nearby areas.</p>
+
+    <div class="area-tags">
+      <div class="tag">📍 Jubilee Hills</div>
+      <div class="tag">📍 Banjara Hills</div>
+      <div class="tag">📍 Begumpet</div>
+      <div class="tag">📍 Secunderabad</div>
+      <div class="tag">📍 Gachibowli</div>
+      <div class="tag">📍 Dilsukhnagar</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="testimonial-section">
+  <h2 class="section-title" style="text-align:center;">Trusted by Patients, Proven by Results</h2>
+
+  <div class="testimonial-slider" id="testimonialSlider">
+
+    <div class="testimonial-track">
+
+      <!-- CARD 1 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Excellent home physiotherapy service. My back pain reduced quickly. Highly recommended!”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Ramesh Kumar</h4>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Very caring and professional. My father recovered well after stroke therapy.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Lakshmi Devi</h4>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Best home physiotherapy. Clear guidance and smooth recovery.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Srinivas Rao</h4>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Very helpful and friendly doctor. My mother’s mobility improved a lot.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Anitha Reddy</h4>
+      </div>
+     <!-- CARD 5 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Highly professional and punctual service. The exercises really helped in improving my strength and flexibility.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Kavitha Sharma</h4>
+      </div>
+
+     <!-- CARD 6 -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>"Best physiotherapy service at home. Friendly doctor and very effective treatment for neck pain.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Srinivas Reddy</h4>
+      </div>
+
+      <!-- DUPLICATE (for smooth loop) -->
+      <div class="testimonial-card">
+        <div class="google-header">
+          <span class="g-icon">G</span>
+          <span>Google Review</span>
+        </div>
+        <p>“Excellent home physiotherapy service. My back pain reduced quickly.”</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h4>– Ramesh Kumar</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+  
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+
+      <h2>Book a Home Physiotherapy Visit Today</h2>
+
+      <p>
+        Get expert care for pain relief, rehabilitation, and recovery — 
+        right at your home with personalized treatment.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="tel:+918897978832" class="btn btn-call">📞 Call Now</a>
+        <a href="https://wa.me/918897978832" class="btn-whatsapp">
+  💬 Get Instant Help on WhatsApp
 </a>
+        <a href="#contact" class="btn btn-book">📅 Book Appointment</a>
+      </div>
 
-<a
-class="btn btn-outline"
-href="#book">
-
-📅 Book Home Visit
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- HERO IMAGE + BOOKING -->
-
-<div class="hero-visual">
-
-
-<img
-  class="hero-photo"
-  src="Images/hope-physiotherapy-v12-exact-local-image.zip"
-  alt="Home physiotherapy session"
->
-
-
-<div class="booking" id="book">
-
-<div class="eyebrow">
-QUICK BOOKING
-</div>
-
-
-<h2>
-Book Your
-<span class="green-text">
-Home Visit
-</span>
-</h2>
-
-
-<small>
-Get expert physiotherapy care at your home.
-</small>
-
-
-<form onsubmit="sendWhatsApp(event)">
-
-
-<div class="form-grid">
-
-
-<input
-id="name"
-placeholder="Your Name"
-required
->
-
-
-<input
-id="phone"
-placeholder="Phone Number"
-required
->
-
-
-<input
-id="area"
-placeholder="Your Area in Hyderabad"
-required
->
-
-
-<select
-id="service"
-required
->
-
-<option value="">
-Select Service
-</option>
-
-<option>
-Back & Neck Pain
-</option>
-
-<option>
-Knee Pain
-</option>
-
-<option>
-Stroke & Neuro Rehabilitation
-</option>
-
-<option>
-Post-Surgery Rehabilitation
-</option>
-
-<option>
-Elderly Care & Mobility
-</option>
-
-<option>
-Sports Injury Rehabilitation
-</option>
-
-</select>
-
-
-<input
-class="full"
-id="date"
-placeholder="Preferred Date & Time (Optional)"
->
-
-</div>
-
-
-<button
-class="btn btn-green book-btn">
-
-💬 Book via WhatsApp →
-
-</button>
-
-
-<div
-style="
-text-align:center;
-color:#71838c;
-font-size:11px;
-margin-top:8px;
-">
-
-We will contact you to confirm your visit.
-
-</div>
-
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </section>
 
+  <section id="contact" class="contact-section">
+  <div class="container contact-wrapper">
 
+    <!-- LEFT SIDE (INFO) -->
+    <div class="contact-info">
 
-<!-- SERVICES -->
+      <h2>Contact Hope Physiotherapy</h2>
+      <p class="contact-sub">
+        Book your home physiotherapy session easily. We are here to help your recovery journey.
+      </p>
 
-<section
-class="section services"
-id="services"
->
+      <div class="contact-item">
+        <span>📞</span>
+        <a href="tel:+918897978832" class="google-call-link google-call-number">+91 8897978832</a>
+      </div>
 
-<div class="section-inner">
+      <div class="contact-item">
+        <span>💬</span>
+        <a href="https://wa.me/918897978832">Chat on WhatsApp</a>
+      </div>
 
+      <div class="contact-item">
+        <span>📧</span>
+        <a href="mailto:drpremkumar1006@gmail.com">drpremkumar1006@gmail.com</a>
+      </div>
 
-<div class="section-head">
+      <div class="contact-item">
+        <span>⏰</span>
+        <p>Mon - Sat | 8:00 AM – 8:00 PM</p>
+      </div>
 
-<div>
+      <div class="contact-item">
+        <span>🏥</span>
+        <p>Home Visit Physiotherapy Service</p>
+      </div>
 
-<div class="eyebrow">
-OUR SERVICES
-</div>
+    </div>
 
-<h2 class="section-title">
-Comprehensive
-<span class="green-text">
-Physiotherapy Services at Home
-</span>
-</h2>
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="contact-form-box">
 
-<div>
-Professional and personalized care for all age groups,
-delivered at your home in Hyderabad.
-</div>
+      <h3>Book Appointment</h3>
 
-</div>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Area / Location">
+        <input type="text" placeholder="Patient Condition">
+        
+        <select>
+          <option>Select Service</option>
+          <option>Back Pain</option>
+          <option>Neck Pain</option>
+          <option>Stroke Rehab</option>
+          <option>Post Surgery</option>
+          <option>Elderly Care</option>
+        </select>
 
-</div>
+        <textarea rows="4" placeholder="Message"></textarea>
 
+        <button type="submit" class="btn-submit">Submit Request</button>
+      </form>
 
+    </div>
 
-<div class="service-grid">
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/4506078/pexels-photo-4506078.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Back and neck physiotherapy"
->
-
-<strong>
-Back & Neck Pain Relief →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/20860580/pexels-photo-20860580.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Knee physiotherapy"
->
-
-<strong>
-Knee Pain Physiotherapy →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/20860577/pexels-photo-20860577.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Shoulder physiotherapy"
->
-
-<strong>
-Shoulder Pain Treatment →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/31234755/pexels-photo-31234755.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Neurological rehabilitation"
->
-
-<strong>
-Stroke & Neuro Rehabilitation →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/30483062/pexels-photo-30483062.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Post surgery rehabilitation"
->
-
-<strong>
-Post-Surgery Rehabilitation →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/30483060/pexels-photo-30483060.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Elderly mobility training"
->
-
-<strong>
-Elderly Care & Mobility Training →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/5794053/pexels-photo-5794053.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Sports injury physiotherapy"
->
-
-<strong>
-Sports Injury Rehabilitation →
-</strong>
-
-</article>
-
-
-<article class="service">
-
-<img
-src="https://images.pexels.com/photos/20860615/pexels-photo-20860615.jpeg?auto=compress&cs=tinysrgb&w=700"
-alt="Bedridden patient physiotherapy"
->
-
-<strong>
-Bedridden Patient Care →
-</strong>
-
-</article>
-
-
-</div>
-
-</div>
-
+  </div>
 </section>
+<div id="popupForm" class="popup-overlay">
+  <div class="popup-box">
 
+    <span class="close-btn" onclick="closePopup()">×</span>
 
+    <h3>Book Your Home Visit</h3>
+    <p>⚡ Same Day Appointment Available</p>
 
-<!-- WHY HOPE -->
+    <form id="popupWhatsappForm">
+      <input type="text" id="pname" placeholder="Full Name" required>
+      <input type="tel" id="pphone" placeholder="Phone Number" required>
+      <input type="text" id="pproblem" placeholder="Your Problem" required>
 
-<section
-class="section why"
-id="why"
->
+      <button type="submit">Book on WhatsApp</button>
+    </form>
 
-<div class="section-inner why-grid">
-
-
-<div>
-
-<div class="eyebrow">
-WHY CHOOSE HOPE PHYSIOTHERAPY
+  </div>
 </div>
-
-<h2 class="section-title">
-
-Your Health, Our
-<span class="green-text">
-Priority at Home
-</span>
-
-</h2>
-
-
-<p>
-Professional, compassionate and personalized
-physiotherapy care at home so you can recover
-comfortably and safely.
-</p>
-
-
-<a
-class="btn btn-blue"
-href="#about"
->
-
-Learn More About Us →
-
-</a>
-
-</div>
-
-
-
-<div class="benefits">
-
-
-<div class="benefit">
-<div class="ico">🏆</div>
-<b>
-14+ Years<br>
-Experience
-</b>
-</div>
-
-
-<div class="benefit">
-<div class="ico">📋</div>
-<b>
-Personalized<br>
-Treatment Plans
-</b>
-</div>
-
-
-<div class="benefit">
-<div class="ico">🏠</div>
-<b>
-Home Visit<br>
-Convenience
-</b>
-</div>
-
-
-<div class="benefit">
-<div class="ico">👥</div>
-<b>
-One-to-One<br>
-Sessions
-</b>
-</div>
-
-
-<div class="benefit">
-<div class="ico">🛡️</div>
-<b>
-Advanced<br>
-Techniques
-</b>
-</div>
-
-
-<div class="benefit">
-<div class="ico">❤️</div>
-<b>
-All Age Groups<br>
-Children to Elderly
-</b>
-</div>
-
-
-</div>
-
-
-
-<div class="why-photo">
-
-<img
-src="https://images.pexels.com/photos/4506078/pexels-photo-4506078.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="Illustrative physiotherapy care"
-style="
-height:260px;
-width:100%;
-object-fit:cover;
-border-radius:22px
-"
->
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- HOW IT WORKS -->
-
-<section
-class="section"
-id="about"
->
-
-<div class="section-inner">
-
-<div class="eyebrow">
-HOW IT WORKS
-</div>
-
-
-<h2 class="section-title">
-Simple Steps to Start Your Home Physiotherapy
-</h2>
-
-
-<div class="steps">
-
-
-<div class="step">
-
-<div class="num">1</div>
-
-<div>
-<b>Book Your Visit</b>
-<br>
-<small>
-Call, WhatsApp or fill the form.
-</small>
-</div>
-
-</div>
-
-
-<div class="step">
-
-<div class="num">2</div>
-
-<div>
-<b>We Schedule</b>
-<br>
-<small>
-Choose a convenient date & time.
-</small>
-</div>
-
-</div>
-
-
-<div class="step">
-
-<div class="num">3</div>
-
-<div>
-<b>Home Assessment</b>
-<br>
-<small>
-Our physiotherapist visits you.
-</small>
-</div>
-
-</div>
-
-
-<div class="step">
-
-<div class="num">4</div>
-
-<div>
-<b>Personalized Treatment</b>
-<br>
-<small>
-Get expert care at your home.
-</small>
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- REVIEWS -->
-
-<section
-class="section reviews"
-id="reviews"
->
-
-<div class="section-inner">
-
-<div class="eyebrow">
-PATIENT REVIEWS
-</div>
-
-
-<h2 class="section-title">
-What Our Patients Say
-</h2>
-
-
-<div class="review-grid">
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-Google reviews will be displayed here once the
-Hope Physiotherapy Google Business Profile is connected.
-</p>
-
-<div class="review-note">
-Authentic reviews only — no placeholder testimonials published.
-</div>
-
-</div>
-
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-Your verified patient feedback can be shown in this
-section after the Google Business Profile is set up.
-</p>
-
-<div class="review-note">
-This area is intentionally kept free of invented reviews.
-</div>
-
-</div>
-
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-We can replace these cards with your real Google reviews
-and direct review link.
-</p>
-
-<div class="review-note">
-Reviews should come from the actual business profile.
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- AREAS -->
-
-<section
-class="section areas"
-id="areas"
->
-
-<div class="section-inner">
-
-<div class="eyebrow">
-AREAS WE SERVE
-</div>
-
-
-<h2 class="section-title">
-Home Physiotherapy Across Hyderabad
-</h2>
-
-
-<p>
-We provide home visit physiotherapy services in major
-areas of Hyderabad.
-</p>
-
-
-<div class="chips">
-
-<span class="chip">📍 Kondapur</span>
-<span class="chip">📍 Gachibowli</span>
-<span class="chip">📍 Miyapur</span>
-<span class="chip">📍 Hitech City</span>
-<span class="chip">📍 Madhapur</span>
-<span class="chip">📍 Manikonda</span>
-<span class="chip">📍 Chandanagar</span>
-<span class="chip">📍 Kukatpally</span>
-<span class="chip">📍 Banjara Hills</span>
-<span class="chip">📍 Jubilee Hills</span>
-<span class="chip">📍 Kothaguda</span>
-<span class="chip">📍 Nallagandla</span>
-<span class="chip">📍 Tellapur</span>
-<span class="chip">📍 Narsingi</span>
-<span class="chip">📍 Financial District</span>
-<span class="chip">📍 and more…</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FAQ -->
-
-<section
-class="section"
-id="faq"
->
-
-<div class="section-inner">
-
-<div class="eyebrow">
-FAQ
-</div>
-
-
-<h2 class="section-title">
-Frequently Asked Questions
-</h2>
-
-
-<details>
-
-<summary>
-<b>
-Do you provide physiotherapy at home?
-</b>
-</summary>
-
-<p>
-Yes. Hope Physiotherapy is designed as a
-home-visit service in Hyderabad.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-<b>
-How can I book a visit?
-</b>
-</summary>
-
-<p>
-Call, WhatsApp or use the booking form above.
-</p>
-
-</details>
-
-
-<details>
-
-<summary>
-<b>
-Which conditions do you treat?
-</b>
-</summary>
-
-<p>
-Common home-care needs include musculoskeletal pain,
-mobility problems, rehabilitation and neurological recovery.
-Assessment is required to determine appropriate care.
-</p>
-
-</details>
-
-
-</div>
-
-</section>
-
-
-
-<!-- FINAL CTA -->
-
-<section class="cta">
-
-<div class="cta-inner">
-
-
-<div>
-
-<h2 style="margin:0">
-Ready to Feel Better at Home?
-</h2>
-
-<div>
-Book your home physiotherapy visit today.
-</div>
-
-</div>
-
-
-<div class="ctas">
-
-<a
-class="btn btn-green"
-href="tel:+918897978832"
->
-📞 Call Now
-</a>
-
-
-<a
-class="btn btn-blue"
-href="https://wa.me/918897978832"
-target="_blank"
->
-💬 WhatsApp
-</a>
-
-
-<a
-class="btn btn-outline"
-href="#book"
->
-📅 Book Home Visit
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<footer>
-
-© 2026 Hope Physiotherapy Home Services • Hyderabad • Appointment Based Home Visit Service
-
-<br>
-
-<small>
-Images are representative/illustrative and are not photographs
-of Hope patients unless specifically stated.
-</small>
-
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <h3>Hope Physiotherapy</h3>
+      <p>
+        Expert home physiotherapy services for pain relief, recovery,
+        rehabilitation, and mobility improvement — all at your doorstep.
+      </p>
+
+      <div class="footer-socials">
+        <a href="#">🌐</a>
+        <a href="https://wa.me/918897978832">💬</a>
+        <a href="tel:+918897978832">📞</a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <p>Neurological Rehabilitation</p>
+      <p>Stroke Rehabilitation</p>
+      <p>Post-Surgery Recovery</p>
+      <p>Elderly Care Physiotherapy</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+
+      <p><strong>📞</strong> 
+        <a href="tel:+918897978832">+91 8897978832</a>
+      </p>
+
+      <p><strong>💬</strong> 
+        <a href="https://wa.me/918897978832">WhatsApp Chat</a>
+      </p>
+
+      <p><strong>📧</strong> 
+        <a href="mailto:drpremkumar1006@gmail.com">Email Us</a>
+      </p>
+
+      <p><strong>⏰</strong> Mon - Sat (8AM – 8PM)</p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    © 2026 Hope Physiotherapy | Designed for Better Recovery ❤️
+  </div>
 </footer>
-
-
-
-<a
-class="whatsapp"
-href="https://wa.me/9188979788832"
-target="_blank"
-aria-label="WhatsApp"
->
-◉
-</a>
-
-
-
 <script>
 
-function sendWhatsApp(e){
+/* Read More Toggle */
+function toggleText(button) {
+  let content = button.previousElementSibling;
 
-  e.preventDefault();
+  content.classList.toggle("open");
 
-  const msg =
-  `Hello Hope Physiotherapy,%0A%0A` +
-  `Name: ${document.getElementById('name').value}%0A` +
-  `Phone: ${document.getElementById('phone').value}%0A` +
-  `Area: ${document.getElementById('area').value}%0A` +
-  `Service: ${document.getElementById('service').value}%0A` +
-  `Preferred date/time: ${
-    document.getElementById('date').value || 'Not specified'
-  }`;
-
-  window.open(
-    'https://wa.me/918897978832?text=' + msg,
-    '_blank'
-  );
-
+  if (content.classList.contains("open")) {
+    button.innerText = "Read Less";
+  } else {
+    button.innerText = "Read More";
+  }
 }
 
+/* Scroll Animation */
+function revealOnScroll() {
+  let elements = document.querySelectorAll(".condition-row");
+
+  elements.forEach(el => {
+    let windowHeight = window.innerHeight;
+    let elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+}
 </script>
-
-
+		  
 </body>
 </html>
