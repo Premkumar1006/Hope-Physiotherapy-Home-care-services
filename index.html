@@ -153,74 +153,83 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 
-/* V13 mobile header correction: keep the booking button beside the logo,
-   and place the physiotherapist details on a separate full-width row. */
+
+/* V14: centered, wider brand; doctor details and booking action share one row */
 @media (max-width:620px) {
   .headrow {
     display:grid !important;
-    grid-template-columns:minmax(0,1fr) 104px !important;
+    grid-template-columns:minmax(0,1fr) 122px !important;
     grid-template-rows:auto auto;
     align-items:center;
-    column-gap:8px !important;
-    row-gap:10px !important;
-    padding:10px 0 !important;
+    column-gap:10px !important;
+    row-gap:12px !important;
+    padding:12px 0 14px !important;
   }
   .brand {
-    grid-column:1;
-    grid-row:1;
-    min-width:0;
-    width:100%;
-    gap:8px;
+    grid-column:1 / -1 !important;
+    grid-row:1 !important;
+    justify-self:center;
+    width:max-content;
+    max-width:100%;
+    gap:13px !important;
   }
   .brandmark {
-    width:52px;
-    height:52px;
-    flex:0 0 52px;
+    width:72px !important;
+    height:72px !important;
+    flex:0 0 72px !important;
+    border-radius:15px;
   }
-  .brandtext { min-width:0; }
-  .brandtext strong { font-size:28px; }
-  .brandtext span { font-size:11px; }
+  .brandtext strong { font-size:38px !important; }
+  .brandtext span { font-size:15px !important; }
   .brandtext small {
-    font-size:6.5px;
-    letter-spacing:.25px;
-    padding:4px 5px;
-    white-space:nowrap;
+    font-size:8px !important;
+    letter-spacing:.55px !important;
+    padding:5px 8px !important;
   }
+  .doctorhead {
+    grid-column:1 !important;
+    grid-row:2 !important;
+    min-width:0;
+    width:100%;
+    border-top:1px solid var(--line) !important;
+    border-left:0 !important;
+    padding:10px 0 0 !important;
+    align-self:center;
+  }
+  .doctorhead b { font-size:16px !important; line-height:1.25; }
+  .doctorhead .degree { font-size:10px !important; padding:3px 8px !important; margin:4px 0 !important; }
+  .doctorhead p { font-size:9.5px !important; line-height:1.35 !important; margin:3px 0 !important; }
   .mobileBook {
     display:flex !important;
-    grid-column:2;
-    grid-row:1;
+    grid-column:2 !important;
+    grid-row:2 !important;
     position:static !important;
-    inset:auto !important;
-    width:104px !important;
+    width:122px !important;
     min-width:0 !important;
-    max-width:104px;
-    min-height:44px;
+    min-height:76px !important;
+    padding:9px 8px !important;
     margin:0 !important;
-    padding:7px 8px !important;
     justify-self:end;
     align-self:center;
     box-sizing:border-box;
-    z-index:1;
+    border-radius:15px !important;
+    text-align:center;
+    font-size:12px !important;
+    line-height:1.2 !important;
   }
-  .doctorhead {
-    grid-column:1 / -1 !important;
-    grid-row:2;
-    width:100%;
-    margin:0;
-    padding:9px 0 0 !important;
-    border-left:0 !important;
-    border-top:1px solid var(--line);
-  }
+  .mobileBook span:first-child { font-size:19px !important; }
   .locationhead { display:none !important; }
 }
-@media (max-width:360px) {
-  .headrow { grid-template-columns:minmax(0,1fr) 88px !important; }
-  .mobileBook { width:88px !important; max-width:88px; }
-  .brandmark { width:46px; height:46px; flex-basis:46px; }
-  .brandtext strong { font-size:25px; }
-  .brandtext span { font-size:10px; }
-  .brandtext small { font-size:5.8px; }
+@media (max-width:380px) {
+  .headrow { grid-template-columns:minmax(0,1fr) 108px !important; column-gap:8px !important; }
+  .brand { gap:10px !important; }
+  .brandmark { width:64px !important; height:64px !important; flex-basis:64px !important; }
+  .brandtext strong { font-size:34px !important; }
+  .brandtext span { font-size:13px !important; }
+  .brandtext small { font-size:7px !important; }
+  .mobileBook { width:108px !important; min-height:72px !important; }
+  .doctorhead b { font-size:15px !important; }
+  .doctorhead p { font-size:8.8px !important; }
 }
 
 </style>
