@@ -152,6 +152,77 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .locationhead{padding-left:14px;font-size:13px}
 }
 
+
+/* V13 mobile header correction: keep the booking button beside the logo,
+   and place the physiotherapist details on a separate full-width row. */
+@media (max-width:620px) {
+  .headrow {
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) 104px !important;
+    grid-template-rows:auto auto;
+    align-items:center;
+    column-gap:8px !important;
+    row-gap:10px !important;
+    padding:10px 0 !important;
+  }
+  .brand {
+    grid-column:1;
+    grid-row:1;
+    min-width:0;
+    width:100%;
+    gap:8px;
+  }
+  .brandmark {
+    width:52px;
+    height:52px;
+    flex:0 0 52px;
+  }
+  .brandtext { min-width:0; }
+  .brandtext strong { font-size:28px; }
+  .brandtext span { font-size:11px; }
+  .brandtext small {
+    font-size:6.5px;
+    letter-spacing:.25px;
+    padding:4px 5px;
+    white-space:nowrap;
+  }
+  .mobileBook {
+    display:flex !important;
+    grid-column:2;
+    grid-row:1;
+    position:static !important;
+    inset:auto !important;
+    width:104px !important;
+    min-width:0 !important;
+    max-width:104px;
+    min-height:44px;
+    margin:0 !important;
+    padding:7px 8px !important;
+    justify-self:end;
+    align-self:center;
+    box-sizing:border-box;
+    z-index:1;
+  }
+  .doctorhead {
+    grid-column:1 / -1 !important;
+    grid-row:2;
+    width:100%;
+    margin:0;
+    padding:9px 0 0 !important;
+    border-left:0 !important;
+    border-top:1px solid var(--line);
+  }
+  .locationhead { display:none !important; }
+}
+@media (max-width:360px) {
+  .headrow { grid-template-columns:minmax(0,1fr) 88px !important; }
+  .mobileBook { width:88px !important; max-width:88px; }
+  .brandmark { width:46px; height:46px; flex-basis:46px; }
+  .brandtext strong { font-size:25px; }
+  .brandtext span { font-size:10px; }
+  .brandtext small { font-size:5.8px; }
+}
+
 </style>
 </head>
 <body>
